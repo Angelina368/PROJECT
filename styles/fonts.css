@@ -1,21 +1,2 @@
-@font-face {
-    font-family: "Montserrat";
-    src: url("../fonts/Montserrat-Regular.ttf");
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-    } @
-    font-face {
-    font-family: "Montserrat";
-    src: url("../fonts/Montserrat-Bold.ttf");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-    }
-    @font-face {
-    font-family: "Montserrat";
-    src: url("../fonts/Montserrat-Italic.ttf");
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-    }
+
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Pacifico&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
