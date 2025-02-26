@@ -2,7 +2,8 @@
     background-color:#ffdead;
     box-shadow: none;
 }
-.teachers {
+.teacher {
     background-color:#ebdac1;
     box-shadow: none;
+    align-items: center;
 }

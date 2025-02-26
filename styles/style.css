@@ -1,6 +1,11 @@
+@import "adaptability.css";
+@import "animation.css";
 @import "base.css";
+@import "card.css";
 @import "fonts.css";
 @import "footer.css";
 @import "header.css";
 @import "main.css";
 @import "normalize.css";
+@import "section.css";
+@import "typography.css";

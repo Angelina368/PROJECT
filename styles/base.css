@@ -5,7 +5,7 @@ box-sizing: border-box;
 }
 html,
 body {
-font-family: 'Arial', sans-serif;
+font-family: 'Helvetica' 'Arial', sans-serif;
 font-size: 18px;
 line-height: 30px;
 color: #000000;
@@ -28,4 +28,10 @@ border: 0;
 clip-path: inset(100%);
 clip: rect(0 0 0 0);
 overflow: hidden;
+}
+.h2{
+    align-items: center;
+    text-align: center;
+
+
 }
