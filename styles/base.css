@@ -9,9 +9,12 @@ font-family: 'Helvetica' 'Arial', sans-serif;
 font-size: 18px;
 line-height: 30px;
 color: #000000;
-background-color: #ffffff;
+background-color: #FFBD88;
 overflow-x: hidden;
 }
+
+
+
 img {
 display: block;
 max-width: 100%;
@@ -40,3 +43,7 @@ overflow: hidden;
     margin-left: auto;
     margin-right: auto;
    }
+
+
+
+

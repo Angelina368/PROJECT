@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход и Регистрация</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="registr">
+    <main class="main container">
+        <div class="form-container" id="login" style="display: none;">
+            <a class="main__button" href="index.html">Назад</a>
+            <h1 class="form-title">Вход в личный кабинет</h1>
+            <form class="form" action="" method="post">
+                <input class="input" type="email" placeholder="Ваш e-mail" required>
+                <input class="input" type="password" placeholder="Пароль" required>
+                <button class="btn" type="submit">Войти</button>
+            </form>
+            <div class="link">
+                Нет аккаунта? <a href="#" onclick="switchToRegister()">Зарегистрируйтесь</a>
+            </div>
+        </div>
+        
+        <div class="form-container" id="register">
+            <a class="main__button" href="index.html">Назад</a>
+            <h1 class="form-title">Регистрация</h1>
+            <form class="form" action="" method="post">
+                <input class="input" type="text" placeholder="Ваше имя" required>
+                <input class="input" type="email" placeholder="Ваш e-mail" required>
+                <input class="input" type="password" placeholder="Пароль" required>
+                <input class="input" type="password" placeholder="Пароль еще раз" required>
+                <button class="btn" type="submit">Регистрация</button>
+            </form>
+            <div class="link">
+                Есть аккаунт? <a href="#" onclick="switchToLogin()">Войдите</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function switchToRegister() {
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('register').style.display = 'block';
+        }
+
+        function switchToLogin() {
+            document.getElementById('register').style.display = 'none';
+            document.getElementById('login').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

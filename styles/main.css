@@ -1,9 +1,63 @@
-.main {
-    background-color:#ffdead;
-    box-shadow: none;
+
+
+.container.container.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F5F5DC; /* цвет для контейнера main */
+    padding: 20px;
+    border-radius: 5px;
 }
-.teacher {
-    background-color:#ebdac1;
-    box-shadow: none;
-    align-items: center;
+
+.intro {
+    margin-bottom: 30px;
+}
+
+.teachers {
+    margin-bottom: 30px;
+}
+
+.teacher__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.teacher__card {
+    border: 1px solid #71BC78;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    max-width: 80px;
+}
+
+.teacher__image {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+.section__title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 62px;
+
+    margin-top: 500;
+    margin-bottom: 17px;
+}
+
+.section__title,
+.section__description {
+    max-width: 700px;
+}
+
+.section__description {
+    line-height: 32px;
+}
+
+.section__title--center,
+.section__description--center {
+    text-align: center;
+
+    max-width: 100%;
 }

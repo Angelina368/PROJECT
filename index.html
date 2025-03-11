@@ -1,116 +1,77 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DesInteri</title>
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/style.css">
-   </head>
-   
-    <body>
-        <header class="header container">
-            <img class="header__logo" src="images/logo.png" alt="logo" width="35" height="35">
-            <h1 class="header__title">DesInteri</h1>
-            <h2 class="header__title">Онлайн-курс по дизайну интерьера</h2>
-            <nav class="header__menu">
-                <ul class="menu">
-                    <div class="header__buttons">
-                        <a class="main__button" href="index.html">Личный кабинет</a>
-                        <a class="main__button" href="course.html">Курсы</a>
-                        <a class="main__button" href="index.html">Оплатить курс</a>
-                        <a class="main__button" href="catalog.html">Медиа</a>
-                        <a class="main__button" href="registr.html">История транзакций</a>
-                        <a class="main__button" href="catalog.html">Настройки сайтов</a>
-                    </div>
-                </ul>
-            </nav>
-         </header>
-<main class="main container">
-     <p> 
-        <h2 class="h2">Освойте дизайн интерьеров с нашими онлайн-курсами, охватывающими планировку пространства, теорию цвета и многое другое! Учитесь у профессионалов отрасли и создавайте потрясающие проекты. Начните обучение сегодня!"</div> </p>
-        </h2>
-        <section>
-        
-        <div class="teacher"> <img src="images/inte.jpg" alt="рисунок интерьера">
-            <h2 class="teacher__title">Наши преподаватели</h2>
-            <div class="teacher__card">
-                <img class="teacher__image" src="images/chel.jpg" width="50" height="50">
-                <button class="teacher__information">Информация о преподавателе</button>
-            </div>
-            <div class="teacher__card">
-                <img class="teacher__image" src="images/chel2.png" width="50" height="50">
-                <button class="teacher__information">Информация о преподавателе</button>
-            </div>
-            <div class="teacher__card"> 
-                <img class="teacher__image" src="images/chel3.webp" width="50" height="50">
-                <button class="teacher__information">Информация о преподавателе</button>
-            </div>
-            <div class="teacher__card">
-            <img class="teacher__image" src="images/chel4.png" width="50" height="50">
-            <button class="teacher__information">Информация о преподавателе</button>
-        </div>
-    </section>
-        <div class="main__search">
-            <img src="images/gjbcr.png" width="30" height="30">
-            <input type="text">
-        </div>
-        <div class="promo_buttons">
-            <a class="promo_button" href="course.html">курсы</a>
-        </div>
-    <section>
-        <div>
-            <img src="images/chel5.png" alt="фото пользователя" width="30" height="30">
-            <input type="text" name="name" placeholder="имя" required>
-            <input type="text" name="sername" placeholder="фамилия" required>
-            <button>Оплаченный курс</button>
-            <button>Остаток обучения</button>
-            <button>оценки</button>
-            <button>сертификаты</button>
-        </div>
-    </section>
-    <section>
-        <from action="/">
-            <img src="images/logo.png" alt="logo" width="35" height="35">
-            <input type="tel" name="login" placeholder="Логин" required>
-            <input type="password" name="password" placeholder="пароль" required>
-            <button class="header__buttons">Вход</button>
-            <button class="header__buttons" href="header__buttons">Зарегистрироваться</button>
-        </from>         
-    </section>
-    <section>
-        <from action="/">
-            <img src="images/logo.png" alt="logo" width="35" height="35">
-            <input type="tel" name="login" placeholder="Логин" required>
-            <input type="password" name="password" placeholder="пароль" required>
-            <input type="password" name="repeat password" placeholder="повторите пароль" required>
-            <button href="">Регистрация</a>
-        </from>  
-    </section>
-    <section>
-            <div>
-                <input type="tel" name="choose a course" placeholder="Выбрать курс" required>
-                <input type="password" name="payment method" placeholder="Способ оплаты" required>      
-                <button>Оплатить курс</button>                
-            </div>
-    </section>
-    <section>
-        <div>
-            <input type="tel" name="fast payment system" placeholder="СПБ" required>
-            <input type="tel" name="By card" placeholder="Картой" required>
-        </div>
-    </section>
-    <section>
-        <div>
-            <input type="tel" name="choose a topic" placeholder="Выбрать тему" required>
-            <input type="tel" name="choose a font" placeholder="Выбрать шрифт" required>            
-        </div>
-    </section>
-</main>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesInteri</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
 
-<footer class="footer container">
-Здесь подвал
-</footer>
+<body>
+    <header class="header container">
+        <img class="header__logo" src="images/logo.png" alt="Логотип">
+        <h1 class="header__title">DesInteri</h1>
+        <h2 class="header__subtitle">Онлайн-курс по дизайну интерьера</h2>
+        <nav class="header__menu">
+            <ul class="menu">
+                <li class="menu__item"><a class="main__button" href="index.html">Главная страница</a></li>
+                <li class="menu__item"><a class="main__button" href="cabinet.html">Личный кабинет</a></li>
+                <li class="menu__item"><a class="main__button" href="course.html">Курсы</a></li>
+                <li class="menu__item"><a class="main__button" href="pay.html">Оплатить курс</a></li>
+                <li class="menu__item"><a class="main__button" href="catalog.html">Настройки сайтов</a></li>
+                <li class="menu__item"><a class="main__button" href="registr.html">Вход/Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main class="main container">
+        <section class="intro">
+            <h2 class="intro__title">Освойте дизайн интерьеров с нашими онлайн-курсами, охватывающими планировку пространства, теорию цвета и многое другое!</h2>
+            <p class="intro__description">Учитесь у профессионалов отрасли и создавайте потрясающие проекты. Начните обучение сегодня!</p>
+        </section>
+
+        <section class="teachers">
+            <h2 class="teachers__title">Наши преподаватели</h2>
+            <div class="teacher__list">
+                <div class="teacher__card">
+                    <img class="teacher__image" src="images/chel.jpg" width="50" height="50" alt="Преподаватель 1">
+                    <button class="teacher__information">Информация о преподавателе</button>
+                </div>
+                <div class="teacher__card">
+                    <img class="teacher__image" src="images/chel2.png" width="50" height="50" alt="Преподаватель 2">
+                    <button class="teacher__information">Информация о преподавателе</button>
+                </div>
+                <div class="teacher__card">
+                    <img class="teacher__image" src="images/chel3.webp" width="50" height="50" alt="Преподаватель 3">
+                    <button class="teacher__information">Информация о преподавателе</button>
+                </div>
+                <div class="teacher__card">
+                    <img class="teacher__image" src="images/chel4.png" width="50" height="50" alt="Преподаватель 4">
+                    <button class="teacher__information">Информация о преподавателе</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="main__search">
+            <img src="images/gjbcr.png" width="30" height="30" alt="Поиск">
+            <input type="text" placeholder="Поиск">
+        </div>
+
+        <section class="design-options">
+            <h2 class="design-options__title">Выбор дизайна</h2>
+            <form class="design-options__form">
+                <input type="text" name="topic_selection" placeholder="Выбрать тему" required class="design-options__input">
+                <input type="text" name="font_selection" placeholder="Выбрать шрифт" required class="design-options__input">
+                <button type="submit" class="design-options__button">Сохранить выбор</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <p>Здесь подвал</p>
+    </footer>
 </body>
 </html>

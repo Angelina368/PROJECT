@@ -36,12 +36,12 @@
 
 .button:hover,
 .button:focus {
-    color: #ffffff;
+    color: #F2E8C9;
     background-color: #fdb100;
 }
 
 .button--accent {
-    color: #ffffff;
+    color: #F2E8C9;
 
     background-color: #fdb100;
 }
@@ -72,4 +72,21 @@
     background-color: #ffffff;
 
     text-decoration-color: transparent;
+}
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+p {
+    margin-bottom: 10px;
 }

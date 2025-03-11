@@ -1,98 +1,58 @@
 .header {
-    background-color:#ffdead;
-    box-shadow: none;
+    background:  #FFE5B4;
+    color: rgba(255, 255, 255, 0);
+    padding: 20px 0;
+    display: flex; /* Используем flexbox для размещения элементов */
+    justify-content: space-between; /* Располагаем логотип и меню по краям */
+    align-items: center; /* Вертикально центрируем элементы в шапке */
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    column-gap: 80px;
-    width: 100%;
-    padding: 3px 120px;
-
-    transform: translateX(-50%);
-
-    animation: show-header 0.8s ease-out forwards;
+.header__logo {
+    margin-right: 50px;
 }
 
-.header__list {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding-left: 0;
+.header__title {
+    font-size: 20px;
+}
 
+.header__subtitle {
+    font-size: 20px;
+}
+
+.header__menu {
     list-style: none;
 }
 
-.header__item-link {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 22px;
-    color: #9196a1;
+.menu {
+    display: flex; /* Используем flexbox для вертикального расположения элементов */
+    flex-direction: column; /* Элементы будут располагаться вертикально */
+    align-items: flex; /* Выравниваем элементы по правой стороне */
+}
+
+.menu__item {
+    margin-bottom: 10px; /* Расстояние между элементами меню */
+}
+
+
+
+.main__button {
     text-decoration: none;
-
-    transition: color 0.4s ease-out, text-shadow 0.3s;
+    padding: 5px 6px;
+    background-color:   #FFEFD5;
+    border-radius: 1px;
+    transition: background-color 0.3s;
+    color: rgb(31, 30, 30);
 }
 
-.header__item-link:hover,
-.header__item-link:focus {
-    color: #3a3c41;
+.main__button:hover {
+    background-color: #afcff6;
 }
 
-.header__item-link:active {
-    text-shadow: 1px -1px 1px #3a3c41;
-}
 
-.header__item-link--active {
-    font-weight: 600;
-    color: #3a3c41;
 
-    cursor: default;
-}
 
-.header__login {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-left: auto;
-    padding: 0;
 
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 22px;
-    color: #fdb100;
-    border: none;
-    background-color: initial;
 
-    cursor: pointer;
-}
 
-.header__login::before {
-    content: "";
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
 
-    border: 1px solid #fdb100;
-    border-radius: 50%;
-    background-color: #fdb100;
-    background-image: url(/images/icon/login.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-
-    will-change: transform;
-    transition: transform 0.4s ease-out;
-}
-
-.header__login:hover::before,
-.header__login:focus::before {
-    transform: scale(1.1);
-}

@@ -1,58 +1,84 @@
-<section>
-    <div class="courses">
-        <h2>Каталог курсов</h2>
-    </div>
-    <ul>
-        <li class="courses__card">
-            <h3 class="courses__card__name">Дизайн интерьеров</h3>
-            <h4 class="courses__cards__price">Цена: бесплатно</h4>
-            <h4 class="courses__cards__mark">Оценка:5</h4> 
-        </li>
-        <li class="courses__card">
-            <h3 class="courses__card__name">Дизайн жилых и коммерческих помещений</h3>
-            <h4 class="courses__card__price">Цена:2500</h4>
-            <h4 class="courses__card__mark">Оценка:4</h4> 
-        </li>
-        <li class="courses__card">
-            <h3 class="courses__card__name">Декоратор интерьера</h3>
-            <h4 class="courses__card__price">Цена:3500 </h4>
-            <h4 class="courses__card__mark">Оценка:5</h4> 
-        </li>
-        <li class="courses__card">
-            <h3 class="courses__card__name">Дизайнер мебели</h3>
-            <h4 class="courses__card__price">Цена:1500 </h4>
-            <h4 class="courses__card__mark">Оценка:4,5</h4> 
-        </li>
-        <li class="courses__card">
-            <h3 class="courses__card__name">Декорирование в дизайне интерьера</h3>
-            <h4 class="courses__card__price">Цена:2000 </h4>
-            <h4 class="courses__card__mark">Оценка:5</h4> 
-        </li>
-        <li class="courses__card">
-            <h3 class="courses__card__name">Текстильный декоратор</h3>
-            <h4 class="courses__card__price">Цена:3000 </h4>
-            <h4 class="courses__card__mark">Оценка:3,7</h4> 
-        </li>
-        <li class="courses__card">
-            <h3 class="courses__card__name">3D-визуализатор</h3>
-            <h4 class="courses__card__price">Цена:2000 </h4>
-            <h4 class="courses__card__mark">Оценка:4,8</h4> 
-        </li>
-        <li class="courses__card">
-            <h3 class="courses__card__name">Дизайн среды</h3>
-            <h4 class="courses__card__price">Цена:бесплатно</h4>
-            <h4 class="courses__card__mark">Оценка:5</h4> 
-        </li>
-        <li class="courses__card">
-            <h3 class="courses__card__name">Веб-дизайнер</h3>
-            <h4 class="courses__card__price">Цена:бесплатно</h4>
-            <h4 class="courses__card__mark">Оценка:4</h4> 
-        </li>
-    </ul>
-    <div>
-       <button>уровень сложности</button> 
-    </div>
-    <div>
-        <button>длительность обучения</button>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesInteri - Онлайн-курс по дизайну интерьера</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+</head>
+<body>
+    <header class="header container">
+        <img class="header__logo" src="images/logo.png" alt="Логотип">
+        <h1 class="header__title">DesInteri</h1>
+        <h2 class="header__subtitle">Онлайн-курс по дизайну интерьера</h2>
+        <nav class="header__menu">
+            <ul class="menu">
+                <li class="menu__item"><a class="main__button" href="index.html">Главная страница</a></li>
+                <li class="menu__item"><a class="main__button" href="cabinet.html">Личный кабинет</a></li>
+                <li class="menu__item"><a class="main__button" href="course.html">Курсы</a></li>
+                <li class="menu__item"><a class="main__button" href="pay.html">Оплатить курс</a></li>
+                <li class="menu__item"><a class="main__button" href="catalog.html">Настройки сайтов</a></li>
+                <li class="menu__item"><a class="main__button" href="registr.html">Вход/Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="courses">
+            <h2 class="courses__title">Каталог курсов</h2>
+            <ul class="courses__list">
+                <li class="courses__card">
+                    <h3 class="courses__card__name">Дизайн интерьеров</h3>
+                    <h4 class="courses__card__price">Цена: бесплатно</h4>
+                    <h4 class="courses__card__rating">Оценка: 5</h4>
+                </li>
+                <li class="courses__card">
+                    <h3 class="courses__card__name">Дизайн жилых и коммерческих помещений</h3>
+                    <h4 class="courses__card__price">Цена: 2500</h4>
+                    <h4 class="courses__card__rating">Оценка: 4</h4>
+                </li>
+                <li class="courses__card">
+                    <h3 class="courses__card__name">Декоратор интерьера</h3>
+                    <h4 class="courses__card__price">Цена: 3500</h4>
+                    <h4 class="courses__card__rating">Оценка: 5</h4>
+                </li>
+                <li class="courses__card">
+                    <h3 class="courses__card__name">Дизайнер мебели</h3>
+                    <h4 class="courses__card__price">Цена: 1500</h4>
+                    <h4 class="courses__card__rating">Оценка: 4,5</h4>
+                </li>
+                <li class="courses__card">
+                    <h3 class="courses__card__name">Декорирование в дизайне интерьера</h3>
+                    <h4 class="courses__card__price">Цена: 2000</h4>
+                    <h4 class="courses__card__rating">Оценка: 5</h4>
+                </li>
+                <li class="courses__card">
+                    <h3 class="courses__card__name">Текстильный декоратор</h3>
+                    <h4 class="courses__card__price">Цена: 3000</h4>
+                    <h4 class="courses__card__rating">Оценка: 3,7</h4>
+                </li>
+                <li class="courses__card">
+                    <h3 class="courses__card__name">3D-визуализатор</h3>
+                    <h4 class="courses__card__price">Цена: 2000</h4>
+                    <h4 class="courses__card__rating">Оценка: 4,8</h4>
+                </li>
+                <li class="courses__card">
+                    <h3 class="courses__card__name">Дизайн среды</h3>
+                    <h4 class="courses__card__price">Цена: бесплатно</h4>
+                    <h4 class="courses__card__rating">Оценка: 5</h4>
+                </li>
+                <li class="courses__card">
+                    <h3 class="courses__card__name">Веб-дизайнер</h3>
+                    <h4 class="courses__card__price">Цена: бесплатно</h4>
+                    <h4 class="courses__card__rating">Оценка: 4</h4>
+                </li>
+            </ul>
+            <div class="filters">
+                <button class="filters__button">Уровень сложности</button> 
+                <button class="filters__button">Длительность обучения</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
