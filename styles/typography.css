@@ -2,7 +2,7 @@
 .container {
     position: relative;
 
-    max-width: auto;
+    max-width: 1440;
     margin: 0 auto;
     padding: 0 120px;
 }
@@ -12,7 +12,7 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 29px;
-    color: #fdb100;
+    color: #fafafa;
 }
 
 /* Кнопки */
@@ -23,9 +23,9 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
-    color: #fdb100;
+    color: #ffffff;
 
-    border: 1px solid #fdb100;
+    border: 1px solid #ffffff;
     border-radius: 16px;
     background-color: transparent;
 
@@ -68,7 +68,7 @@
 
 .button--link:hover,
 .button--link:focus {
-    color: #fdb100;
+    color: #ffffff;
     background-color: #ffffff;
 
     text-decoration-color: transparent;
