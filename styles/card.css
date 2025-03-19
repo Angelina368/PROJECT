@@ -1,10 +1,11 @@
 .card {
-    margin-top: 113px;
+    margin-top: 110px;
+    
 }
 
 .card__list {
-    display: grid;
-    grid-template-columns: repeat(4, 278px);
+    display: flex;
+    grid-template-columns: repeat(10, 310px);
     gap: 29px;
     padding-left: 0;
     margin-top: 46px;
@@ -16,14 +17,19 @@
 
     padding: 24px 24px 34px;
 
-    text-decoration: none;
 
+    text-decoration: none;
+    align-content: center;
+    text-align: center;
     border-radius: 24px;
     background-color: #F5F5DC;
     box-shadow: 0 16px 72px 0 rgba(34, 39, 47, 0.05);
 
     will-change: top;
     transition: top 0.2s linear;
+    scroll-snap-align: start;
+    width: 278px;
+    flex-shrink: 0;
 }
 
 .card__item:hover {
