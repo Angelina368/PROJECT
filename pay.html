@@ -13,17 +13,17 @@
         <h2 class="header__subtitle">Онлайн-курс по дизайну интерьера</h2>
         <nav class="header__menu">
             <ul class="menu">
-                <li class="menu__item"><a class="main__button" href="index.html">Главная страница</a></li>
-                <li class="menu__item"><a class="main__button" href="cabinet.html">Личный кабинет</a></li>
-                <li class="menu__item"><a class="main__button" href="course.html">Курсы</a></li>
-                <li class="menu__item"><a class="main__button" href="pay.html">Оплатить курс</a></li>
-                <li class="menu__item"><a class="main__button" href="catalog.html">Настройки сайтов</a></li>
-                <li class="menu__item"><a class="main__button" href="registr.html">Вход/Регистрация</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="index.html">Главная страница</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="cabinet.html">Личный кабинет</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="course.html">Курсы</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="pay.html">Оплатить курс</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="catalog.html">Настройки сайтов</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="registr.html">Вход/Регистрация</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
+    <main class="main container">
         <section class="payment">
             <h2 class="payment__title">Оплата курса</h2>
             <form class="payment__form">
@@ -33,16 +33,14 @@
             </form>
         </section>
 
-        <section class="fast-payment">
-            <h2 class="fast-payment__title">Быстрая оплата</h2>
-            <form class="fast-payment__form">
-                <input type="text" name="fast_payment_system" placeholder="Система быстрой оплаты" required class="fast-payment__input">
-                <input type="text" name="card_number" placeholder="Номер карты" required class="fast-payment__input">
-                <button type="submit" class="fast-payment__button">Оплатить</button>
+        <section class="payment payment--fast">
+            <h2 class="payment__title payment__title--fast">Быстрая оплата</h2>
+            <form class="payment__form payment__form--fast">
+                <input type="text" name="fast_payment_system" placeholder="Система быстрой оплаты" required class="payment__input payment__input--fast">
+                <input type="text" name="card_number" placeholder="Номер карты" required class="payment__input payment__input--fast">
+                <button type="submit" class="payment__button payment__button--fast">Оплатить</button>
             </form>
         </section>
-
-
     </main>
 </body>
 </html>
