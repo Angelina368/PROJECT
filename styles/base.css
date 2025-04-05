@@ -1,8 +1,3 @@
-*,
-::before,
-::after {
-box-sizing: border-box;
-}
 html,
 body {
 font-family: 'Helvetica' 'Arial', sans-serif;
@@ -11,16 +6,19 @@ line-height: 30px;
 color: #000000;
 background-color: #FFBD88;
 overflow-x: hidden;
-
 }
 
-
+::before,
+::after {
+box-sizing: border-box;
+}
 
 img {
 display: block;
 max-width: 100%;
 height: auto;
 }
+
 .visually-hidden {
 position: absolute;
 width: 1px;
@@ -33,12 +31,7 @@ clip-path: inset(100%);
 clip: rect(0 0 0 0);
 overflow: hidden;
 }
-.h2{
-    align-items: center;
-    text-align: center;
 
-
-}
 .container{
     width: 1440px;
     margin-left: auto;
