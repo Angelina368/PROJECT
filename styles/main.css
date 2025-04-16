@@ -61,3 +61,15 @@
 
     max-width: 100%;
 }
+
+.main__search {
+    display: flex;
+    margin: 20px 0;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    }
+    .main__search input{
+    padding: 5px; /*внутренний отступ*/
+    border-radius: 8px; /*края будут закруглены с радиусом в 8 пикселей */
+    }

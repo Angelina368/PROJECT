@@ -83,11 +83,26 @@ body {
     color: #333;
 }
 
-h1, h2, h3, h4 {
+.h1 {
     margin-bottom: 10px;
-    color: #2c3e50;
+    color: #846358;
 }
 
-p {
+.h2 {
+    margin-bottom: 10px;
+    color: #846358;
+}
+
+.h3 {
+    margin-bottom: 10px;
+    color: #846358;
+}
+
+.h4 {
+    margin-bottom: 10px;
+    color: #846358;
+}
+
+.p {
     margin-bottom: 10px;
 } 
