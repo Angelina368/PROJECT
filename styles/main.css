@@ -69,7 +69,29 @@
     gap: 10px;
     align-items: center;
     }
+
     .main__search input{
     padding: 5px; /*внутренний отступ*/
     border-radius: 8px; /*края будут закруглены с радиусом в 8 пикселей */
     }
+
+    .design-options__form{
+        display: flex; /* гибкое отображение */
+        flex-direction: column; /* поставим все элементы вертикально*/
+        gap: 5px; /*добавим отступы между элементами */
+        width: 400px; /*укажем ширину всей формы*/
+      margin-left: auto; /*отступ слева и справа автоматически одинаковый, в итоге форма встанет по центру*/
+      margin-right: auto;
+      }
+
+      .design-options__form input{
+        padding: 5px; /*внутренний отступ*/
+        border-radius: 8px; /*края будут закруглены с радиусом в 8 пикселей */
+        }
+
+        .design-options__form button{
+            border: none; /*убираем границу или рамку*/
+            padding: 5px; /*внутренний отступ*/
+            background-color: #b59281; /*цвет фона*/
+            color: white; /*цвет текста*/
+            }
