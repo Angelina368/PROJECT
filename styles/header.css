@@ -1,0 +1,55 @@
+.header {
+    background:  #ffd8a8;
+    color: #000000;
+    padding: 20px 0;
+    display: flex; /* Используем flexbox для размещения элементов */
+    justify-content: space-between; /* Располагаем логотип и меню по краям */
+    align-items: center; /* Вертикально центрируем элементы в шапке */
+}
+
+.header__logo {
+    margin-right: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+
+.header__subtitle {
+    font-size: 20px;
+}
+
+.header__menu {
+    list-style: none;
+}
+
+.menu {
+    display: flex; /* Используем flexbox для вертикального расположения элементов */
+    flex-direction: column; /* Элементы будут располагаться вертикально */
+    align-items: flex; /* Выравниваем элементы по правой стороне */
+}
+
+.menu__item {
+    margin-bottom: 10px; /* Расстояние между элементами меню */
+}
+
+.main__button {
+    text-decoration: none;
+    padding: 5px 6px;
+    background-color:   #f0f0f0;
+    border-radius: 1px;
+    transition: background-color 0.3s;
+    color: rgb(31, 30, 30);
+}
+
+.main__button:hover {
+    background-color: #a1dba7;
+}
+
+
+
+
+
+
+
+
+

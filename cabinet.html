@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личная информация</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+</head>
+<body>
+    <header class="header container">
+        <img class="header__logo" src="images/logo.png" alt="Логотип">
+        <h1 class="header__title">DesInteri</h1>
+        <h2 class="header__subtitle">Онлайн-курс по дизайну интерьера</h2>
+        <nav class="header__menu">
+            <ul class="menu">
+                <li class="menu__item"><a class="menu__link main__button" href="index.html">Главная страница</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="cabinet.html">Личный кабинет</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="courses.html">Курсы</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="payment.html">Оплата курса</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="registr.html">Вход/Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main container">
+        <section class="user-info">
+            <h2 class="user-info__title">Личная информация</h2>
+            <form class="user-info__form">
+                <img src="images/chel3.webp" alt="Фото пользователя" class="user-info__image" width="200" height="200">
+                <input type="text" name="name" placeholder="Имя" required class="user-info__input">
+                <input type="text" name="surname" placeholder="Фамилия" required class="user-info__input">
+            </form>
+            <div class="user-info__actions">
+                <button class="user-info__button">Оплаченный курс</button>
+                <button class="user-info__button">Остаток обучения</button>
+                <button class="user-info__button">Оценки</button>
+                <button class="user-info__button">Сертификаты</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

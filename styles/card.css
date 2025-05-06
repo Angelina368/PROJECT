@@ -1,0 +1,95 @@
+.card {
+    margin-top: 110px;
+    
+}
+
+.card__list {
+    display: flex;
+    grid-template-columns: repeat(10, 310px);
+    gap: 29px;
+    padding-left: 0;
+    margin-top: 46px;
+}
+
+.card__item {
+    position: relative;
+    top: 0;
+
+    padding: 24px 24px 34px;
+
+
+    text-decoration: none;
+    align-content: center;
+    text-align: center;
+    border-radius: 24px;
+    background-color: #dcffdc;
+    box-shadow: 0 16px 72px 0 #c99494;
+
+    will-change: top;
+    transition: top 0.2s linear;
+    scroll-snap-align: start;
+    width: 278px;
+    flex-shrink: 0;
+}
+
+.card__item {
+    /*тут ваш код кнопки*/
+   transition: background-color 0.3s,
+   color 0.3s;
+}
+
+.card__item:hover {
+   background-color: #9efd9e;
+   color: #000000;
+}
+
+.card__item:active {
+   background-color: #0dfc0d;
+   color: #ffffff;
+}
+
+.card__item {
+    /*тут ваш код кнопки*/
+    transition: transform 0.3s;
+}
+
+.card__item:hover {
+    transform: scale(1.05);
+}
+
+.card__item:hover {
+    top: 10px;
+}
+
+
+
+.card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    margin-bottom: 24px;
+
+    line-height: 30px;
+
+    border-radius: 12px;
+    background-color: rgba(255, 239, 204, 1);
+}
+
+.card__title {
+    margin-bottom: 16px;
+
+    font-size: 24px;
+    font-weight: 700;
+    color: #c0907f;
+}
+
+.card__description {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: #846358;
+}
+
