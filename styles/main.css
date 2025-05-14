@@ -28,11 +28,24 @@
     padding: 10px;
     text-align: center;
     max-width: 80px;
+    
 }
 
 .teacher__image {
     border-radius: 50%;
     margin-bottom: 10px;
+}
+
+.teacher__item {
+    width: 360px; /*устанавливаем ширину для каждого элемента*/
+    transition: 0.3s ease; /* плавное изменение отображения длительностью 0.3 секунды
+*/
+   }
+.teacher__link {
+    border: none; /* убираем рамку у кнопки*/
+    margin-top: 20px; /*отступ сверху*/
+    color: #ff0008; /*цвет текста*/
+    cursor: pointer; /* курсор меняем на указатель */
 }
 
 .section__title {
