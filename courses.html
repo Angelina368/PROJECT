@@ -101,13 +101,43 @@
                 <button class="add-to-cart-button">Добавить в корзину</button>
             </div>
         </section>
-    </main>
-    <h2>Корзина</h2>
-    <ul id="cart-items">
-        <!-- Элементы корзины будут здесь -->
-    </ul>
-    <p>Итого: <span id="cart-total">0</span> руб.</p>
+
+        <section class="cart">  <!--  Создаем секцию для корзины  -->
+            <h2>Корзина</h2>
+            <ul id="cart-items">
+                <!-- Товары, добавленные в корзину, будут отображаться здесь -->
+            </ul>
+<p>Итого: <span id="cart-total">0</span> руб.</p>
     <button id="checkout-button" class="main__button">Перейти к оплате</button>
+</section>
+    <!-- --- Окно оплаты --- -->
+    <div class="overlay" id="payment-overlay">
+        <div class="payment-form">
+            <span class="close-button" id="close-payment-form">&times;</span>
+            <h2>Оплата</h2>
+            <form id="payment-form">
+                <label for="card-number">Номер карты:</label>
+                <input type="text" id="card-number" name="card_number" required>
+
+                <label for="expiry-date">Срок действия:</label>
+                <input type="text" id="expiry-date" name="expiry_date" placeholder="MM/ГГ" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="amount">Сумма к оплате:</label>
+                <input type="text" id="amount" name="amount" readonly>  <!-- Сумма будет заполнена автоматически -->
+
+                <button type="submit">Оплатить</button>
+            </form>
+        </div>
+    </div>
+    
+    </main>
+    
 
 </body>
 </html>
