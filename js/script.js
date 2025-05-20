@@ -284,61 +284,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Переменная, которая хранит текущий индекс первой карточки, отображаемой в слайдере. Изначально она равна 0, что означает, что первая карточка будет видна.
-  let currentIndex = 0;
-  //Объявляем переменную slider и сохраняем в нее все элементы на странице с классом
-  treners__item
-  const slider = document.querySelectorAll(".card__list");
-  // объявляем переменную prevButton и сохраняем в нее кнопку для перехода к предыдущей группе карточек
-  const prevButton = document.querySelector(".card__left");
-  // объявляем переменную nextButton и сохраняем в нее кнопку для перехода к следующей группе карточек
-  const nextButton = document.querySelector(".card__right");
-  //объявлем переменную для хранения количества отображаемых карточек
-  const visibleCards = 3;
-  // Вызываем функцию updateSlider() для первоначальной настройки отображения карточек.
-  updateSlider();
-  //Для кнопки «предыдущий» добавляем обработчик события клика по этой кнопке:
-  prevButton.addEventListener("click", () => {
-      // Если индекс у карточки (currentIndex) больше 0, то уменьшаем его на 1, чтобы показать предыдущую карточку.
+    const slider = document.querySelector('.card__list');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    const cardItems = document.querySelectorAll('.card__item');
 
-    if (currentIndex > 0) {
-        currentIndex--;
+    // Убедитесь, что элементы найдены
+    if (!slider || !prevButton || !nextButton || cardItems.length === 0) {
+        console.error('Не найдены элементы слайдера!');
+        return;
     }
-    // Иначе переход к последним карточкам, если мы уже находимся на первой
-    else {
-        currentIndex = slider.length - visibleCards;
+
+    let currentIndex = 0;
+    const totalCards = cardItems.length;
+    const cardWidth = cardItems[0].offsetWidth;  // Важно вычислить здесь
+
+    // Функция обновления положения слайдера
+    function updateSlider() {
+        const translateX = -currentIndex * cardWidth;
+        slider.style.transform = `translateX(${translateX}px)`;
     }
-    //Теперь нужно обновить отображение карточек на экране, вызвав функцию updateSlider:
+
+    // Функция перехода к следующему слайду
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalCards;
+        updateSlider();
+    }
+
+    // Функция перехода к предыдущему слайду
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+        updateSlider();
+    }
+
+    // Привязка обработчиков событий к кнопкам
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+
+    // Начальная установка слайдера
     updateSlider();
 });
-// Для кнопки «следующий» добавляем обработчик события клика по этой кнопке:
-nextButton.addEventListener("click", () => {
-    // Если индекс у карточки (currentIndex) меньше, чем индекс первой карточки в последней группе, то мы можем увеличить currentIndex на 1 и перейти к следующей карточке
-    if (currentIndex < slider.length - visibleCards) {
-        currentIndex++;
-    }
-    // Иначе если индекс у карточки (currentIndex) больше 0, то уменьшаем его на 1, чтобы показать предыдущую карточку.
-    else {      
-        currentIndex = 0; // Переход к началу карточек
-    }
-   //Теперь нужно обновить отображение карточек на экране, вызвав функцию updateSlider:
-    updateSlider();
-});
-// Создаем функцию, которая отвечает за обновление отображения карточек в слайдере
-function updateSlider() {
-    // Проходим по каждому элементу массива slider с помощью цикла forEach. Внутри функции 2 переменные: item – текущая карточка, а index — его индекс в массиве.
-    slider.forEach((item, index) => {
-        // Проверяем, нужно ли показывать карточку (находится ли индекс карточки в пределах видимых карточек?)
-// Если индекс карточки находится в пределах видимых карточек:
-        if (index >= currentIndex && index < currentIndex + visibleCards) {
-            // Показываем карточку
-            item.style.display = "block";
-        }
-        // Иначе скрываем карточку
-        else {
-            item.style.display = "none";
-        }
-    });
-}
-
-  });

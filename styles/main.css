@@ -6,6 +6,7 @@
     background-color: #ffd8a8; 
     padding: 20px;
     border-radius: 5px;
+    position: relative;    
 }
 
 .intro {
@@ -52,7 +53,6 @@
     font-size: 42px;
     font-weight: 700;
     line-height: 62px;
-
     margin-top: 500;
     margin-bottom: 17px;
 }
@@ -69,49 +69,8 @@
 .section__title--center,
 .section__description--center {
     text-align: center;
-
     max-width: 100%;
 }
-
-.main__search {
-    display: flex;
-    margin: 20px 0;
-    width: 100%;
-    gap: 10px;
-    align-items: center;
-    }
-
-    .main__search {
-        /*тут ваш код поля */
-        transition: outline 0.3s;
-    }
-
-  
-    .main__search input{
-    padding: 5px; /*внутренний отступ*/
-    border-radius: 8px; /*края будут закруглены с радиусом в 8 пикселей */
-    }
-       
-    .design-options__form {
-        display: flex; /* гибкое отображение */
-        flex-direction: column; /* поставим все элементы вертикально*/
-        gap: 5px; /*добавим отступы между элементами */
-        width: 400px; /*укажем ширину всей формы*/
-      margin-left: auto; /*отступ слева и справа автоматически одинаковый, в итоге форма встанет по центру*/
-      margin-right: auto;
-    }
-
-    .design-options__form input {
-        padding: 5px; 
-        border-radius: 8px; 
-    }
-
-    .design-options__form button {
-        border: none; 
-        padding: 5px; 
-        background-color: #eeb69a; 
-        color: white; 
-    }
 
 
     .overlay {
