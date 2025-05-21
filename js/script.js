@@ -1,148 +1,126 @@
 "use strict";
-//всплывающее окно настроеек
-document.addEventListener('DOMContentLoaded', () => {
-  // * 1. Начало.
-  // * 2. Получаем все элементы с описанием.
-  // * 3. Для каждого изображения (проверяем есть ли такие изображеня):
-  // *  3.1. Добавляем обработчик наведения курсора на изображение:
-  // *    3.1.1. Да:
-  // *      3.1.1.1. Показываем текст при наведении.
-  // *    3.1.2. Нет: продолжаем.
-  // *   3.2. Добавляем обработчик курсор уходит с изображеия:
-  // *    3.2.1. Да:
-  // *      3.2.1.1. Скрываем элемент с описанием.
-  // *    3.2.2. Нет: продолжаем.
-  // * 4. Конец.
-  
-  const settingsButton = document.getElementById('settings-button');
-  const settingsOverlay = document.getElementById('settings-overlay');
-  const settingsModal = document.getElementById('settings-modal');
-  const closeSettingsButton = document.getElementById('close-settings');
-
-  // Функция для показа модального окна и затемнения фона
-  function showSettings() {
-      settingsOverlay.style.display = 'block';
-        console.log('Мышка наведена на изображение, показываем текст');
-      settingsModal.style.display = 'block';
-        console.log('Мышка наведена на изображение, показываем текст');
-  }
-
-  // Функция для скрытия модального окна и снятия затемнения
-  function hideSettings() {
-      settingsOverlay.style.display = 'none';
-      settingsModal.style.display = 'none';
-  }
-
-  // Обработчик клика по кнопке настроек
-  settingsButton.addEventListener('click', showSettings);
-    console.log('Мышка наведена на изображение, показываем текст');
-
-  // Обработчик клика по кнопке закрытия настроек
-  closeSettingsButton.addEventListener('click', hideSettings);
-    console.log('Мышка наведена на изображение, показываем текст');
-
-  // Закрытие при клике вне модального окна (опционально)
-  settingsOverlay.addEventListener('click', (event) => {
-      if (event.target === settingsOverlay) {
-          hideSettings();
-      }
-  });
-});
-
-//смена формы регистрации или войти
-function switchToRegister() {
-  document.getElementById('login').style.display = 'none';
-  document.getElementById('register').style.display = 'block';
-}
-
-function switchToLogin() {
-  document.getElementById('register').style.display = 'none';
-  document.getElementById('login').style.display = 'block';
-}
 
 document.addEventListener('DOMContentLoaded', () => {
-  const settingsOverlay = document.getElementById('settings-overlay');
-  const settingsModal = document.getElementById('settings-modal');
-  const settingsButton = document.getElementById('settings-button'); // Assuming a button to open settings exists
-  const closeButton = document.getElementById('settings-close-button');
-  const themeSelect = document.getElementById('theme-select');
-  const fontSelect = document.getElementById('font-select');
+    // Настройки темы и шрифта (перенесены вверх, чтобы быть доступными везде)
+    const themeSelect = document.getElementById('theme-select');
+    const fontSelect = document.getElementById('font-select');
 
+    // Функция для применения темы
+    function applyTheme(theme) {
+        document.body.classList.toggle('dark', theme === 'dark');
+    }
 
-  // Функция для открытия режима настроек
-  function openSettings() {
-    settingsOverlay.style.display = 'block';
-    settingsModal.style.display = 'block';
-  }
+    // Функция для применения шрифта
+    function applyFont(font) {
+        document.body.className = font === 'default' ? '' : font;
+    }
 
-  // Функция для закрытия режима настроек
-  function closeSettings() {
-    settingsOverlay.style.display = 'none';
-    settingsModal.style.display = 'none';
-  }
-
-  // Прослушиватели событий для открытия/закрытия 
-  if (settingsButton) {
-    settingsButton.addEventListener('click', openSettings);
-  }
-
-  if (closeButton) {
-    closeButton.addEventListener('click', closeSettings);
-  }
-
-  if (settingsOverlay) {
-    settingsOverlay.addEventListener('click', (event) => {
-      if (event.target === settingsOverlay) { // Close on overlay click
-        closeSettings();
-      }
-    });
-  }
-
-
-  // Выбор темы
-  if (themeSelect) {
-    themeSelect.addEventListener('change', () => {
-      const selectedTheme = themeSelect.value;
-      document.body.classList.toggle('dark', selectedTheme === 'dark'); // Use toggle for cleaner code
-      // Сохраните их в локальном хранилище
-      localStorage.setItem('theme', selectedTheme);
-    });
-
-    // Применить сохраненную тему при загрузке страницы
+    // Применяем сохраненные настройки при загрузке страницы
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-      themeSelect.value = savedTheme;
-      document.body.classList.toggle('dark', savedTheme === 'dark');
+        themeSelect.value = savedTheme;
+        applyTheme(savedTheme);
     }
-  }
 
-  // Выбор шрифта
-  if (fontSelect) {
-    fontSelect.addEventListener('change', () => {
-      const selectedFont = fontSelect.value;
-      // смена шрифта и сохранение выбраного варианта
-      document.body.className = selectedFont === 'default' ? '' : selectedFont;
-      // Сохраните шрифт в локальном хранилище
-      localStorage.setItem('font', selectedFont);
-    });
-
-    // Применить сохраненный шрифт при загрузке страницы
     const savedFont = localStorage.getItem('font');
     if (savedFont) {
-      fontSelect.value = savedFont;
-      document.body.className = savedFont === 'default' ? '' : savedFont;
+        fontSelect.value = savedFont;
+        applyFont(savedFont);
     }
-  }
+    //всплывающее окно настроеек
+    const settingsButton = document.getElementById('settings-button');
+    const settingsOverlay = document.getElementById('settings-overlay');
+    const settingsModal = document.getElementById('settings-modal');
+    const closeSettingsButton = document.getElementById('close-settings');
+
+    // Функция для показа модального окна и затемнения фона
+    function showSettings() {
+        settingsOverlay.style.display = 'block';
+        settingsModal.style.display = 'block';
+    }
+
+    // Функция для скрытия модального окна и снятия затемнения
+    function hideSettings() {
+        settingsOverlay.style.display = 'none';
+        settingsModal.style.display = 'none';
+    }
+
+    // Обработчик клика по кнопке настроек
+    settingsButton.addEventListener('click', showSettings);
+
+    // Обработчик клика по кнопке закрытия настроек
+    closeSettingsButton.addEventListener('click', hideSettings);
+
+    // Закрытие при клике вне модального окна (опционально)
+    settingsOverlay.addEventListener('click', (event) => {
+        if (event.target === settingsOverlay) {
+            hideSettings();
+        }
+    });
+
+
+    //смена формы регистрации или войти
+    function switchToRegister() {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('register').style.display = 'block';
+    }
+
+    function switchToLogin() {
+        document.getElementById('register').style.display = 'none';
+        document.getElementById('login').style.display = 'block';
+    }
+
+    const closeButton = document.getElementById('settings-close-button');
+
+
+
+    // Прослушиватели событий для открытия/закрытия 
+    if (settingsButton) {
+        settingsButton.addEventListener('click', showSettings);
+    }
+
+    if (closeButton) {
+        closeButton.addEventListener('click', hideSettings);
+    }
+
+    if (settingsOverlay) {
+        settingsOverlay.addEventListener('click', (event) => {
+            if (event.target === settingsOverlay) { // Close on overlay click
+                hideSettings();
+            }
+        });
+    }
+
+
+    // Выбор темы
+    if (themeSelect) {
+        themeSelect.addEventListener('change', () => {
+            const selectedTheme = themeSelect.value;
+            applyTheme(selectedTheme);
+            // Сохраните их в локальном хранилище
+            localStorage.setItem('theme', selectedTheme);
+        });
+    }
+
+    // Выбор шрифта
+    if (fontSelect) {
+        fontSelect.addEventListener('change', () => {
+            const selectedFont = fontSelect.value;
+            applyFont(selectedFont);
+            // Сохраните шрифт в локальном хранилище
+            localStorage.setItem('font', selectedFont);
+        });
+    }
 
     // Закрыть клавишей Escape
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
-            closeSettings();
+            hideSettings();
         }
     });
-    
 
-       //  Получение ID преподавателя из URL(если он есть)
+
+    //  Получение ID преподавателя из URL(если он есть)
     const urlParams = new URLSearchParams(window.location.search);
     const teacherId = urlParams.get('id');
 
@@ -172,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //  Данные о преподавателях  (отзывы)
     const teachersData = {
-        "1": { 
+        "1": {
             name: "Куршакова Юлия",
             details: "Преподаватель по курсам дизайн интерьера, декоратор интерьера",
             reviews: [
@@ -180,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "🌟 Отзыв от Михаила: Я был приятно удивлён качеством обучения на курсах. Преподаватель делился актуальными трендами и советами.",
             ]
         },
-        "2": { 
+        "2": {
             name: "Иванов Даниил",
             details: "Преподаватель по курсам дизайн жилых и коммерческих помещений, дизайн среды",
             reviews: [
@@ -188,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "🌟 Отзыв от Романа: Курс по дизайну среды был настоящим открытием для меня. Преподаватель делился актуальными трендами и навыками, которые я смогла сразу применить на практике.",
             ]
         },
-        "3": { 
+        "3": {
             name: "Нехорошков Данила",
             details: "Преподаватель по курсам декорирование в дизайне интерьера, 3D-визуализатор",
             reviews: [
@@ -196,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "🌟 Отзыв от Евгении: Я прошла курс 3D-визуализации и осталась в полном восторге! Преподаватель объясняет сложные вещи простым языком и всегда готов помочь.",
             ]
         },
-        "4": { 
+        "4": {
             name: "Молотова Анна",
             details: "Преподаватель по курсам дизайнер мебели, текстильный декоратор, веб-дизайнер",
             reviews: [
@@ -207,57 +185,57 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Загрузка данных о преподавателе (при загрузке страницы)
-      if (teacherId && teachersData[teacherId]) { 
-        const teacher = teachersData[teacherId]; 
+    if (teacherId && teachersData[teacherId]) {
+        const teacher = teachersData[teacherId];
 
-        teacherNameElement.textContent = teacher.name; 
-        teacherDetailsElement.textContent = teacher.details; 
+        teacherNameElement.textContent = teacher.name;
+        teacherDetailsElement.textContent = teacher.details;
 
-        displayReviews(teacher.reviews); 
+        displayReviews(teacher.reviews);
     } else {
         // Если ID преподавателя не найден
         teacherNameElement.textContent = "Преподаватель не найден";
         teacherDetailsElement.textContent = "К сожалению, этого преподавателя не существует.";
     }
 
-    reviewForm.addEventListener('submit', function(event) {
-        event.preventDefault(); 
+    reviewForm.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-        const reviewText = document.getElementById('review-text').value; 
+        const reviewText = document.getElementById('review-text').value;
 
-        if (reviewText.trim() !== '') { 
+        if (reviewText.trim() !== '') {
 
-          
+
             teachersData[teacherId].reviews.push(reviewText);
 
             displayReviews(teachersData[teacherId].reviews);
-            document.getElementById('review-text').value = ''; 
+            document.getElementById('review-text').value = '';
         } else {
             alert('Пожалуйста, введите текст отзыва.');
         }
-});
-//функциональность добавления курсов в корзину, отображения корзины и перехода к оплате
+    });
+    //функциональность добавления курсов в корзину, отображения корзины и перехода к оплате
     const addToCartButtons = document.querySelectorAll(".add-to-cart-button");
     const goToPaymentButton = document.getElementById("go-to-payment-button");
     const cartList = document.getElementById("cart-list");
     const totalPriceElement = document.getElementById("total-price");
     const payButton = document.getElementById("pay-button");
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || []; 
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     const saveCart = () => {
-        localStorage.setItem("cart", JSON.stringify(cart)); 
+        localStorage.setItem("cart", JSON.stringify(cart));
     };
 
     const displayCart = () => {
-        cartList.innerHTML = ""; 
+        cartList.innerHTML = "";
         let total = 0;
 
         cart.forEach(item => {
             const listItem = document.createElement("li");
             listItem.textContent = `${item.courseName} - ${item.coursePrice} руб. (Кол-во: ${item.quantity})`;
             cartList.appendChild(listItem);
-            total += Number(item.coursePrice) * item.quantity; 
+            total += Number(item.coursePrice) * item.quantity;
         });
 
         totalPriceElement.textContent = `Общая стоимость: ${total} руб.`;
@@ -273,54 +251,62 @@ document.addEventListener('DOMContentLoaded', () => {
             const existingCourse = cart.find(item => item.courseId === courseId);
 
             if (!existingCourse) {
-                cart.push({ courseId: courseId, courseName: courseName, coursePrice: coursePrice, quantity: 1 }); 
+                cart.push({ courseId: courseId, courseName: courseName, coursePrice: coursePrice, quantity: 1 });
             } else {
-                existingCourse.quantity++; 
+                existingCourse.quantity++;
             }
 
-            saveCart(); 
+            saveCart();
             console.log(`Курс с ID ${courseId} добавлен в корзину.`);
-            displayCart(); 
+            displayCart();
         });
     });
+});
 
-    const slider = document.querySelector('.card__list');
-    const prevButton = document.querySelector('.prev-button');
-    const nextButton = document.querySelector('.next-button');
-    const cardItems = document.querySelectorAll('.card__item');
+document.addEventListener('DOMContentLoaded', () => {
+  const slider = document.querySelector('.card__list');
+  const cardItems = document.querySelectorAll('.card__item');
+  const cardListContainer = document.querySelector('.card__list-container');
+  const prevButton = document.querySelector('.prev-button');
+  const nextButton = document.querySelector('.next-button');
 
-    // Убедитесь, что элементы найдены
-    if (!slider || !prevButton || !nextButton || cardItems.length === 0) {
-        console.error('Не найдены элементы слайдера!');
-        return;
-    }
+  if (!slider || !cardItems || cardItems.length === 0 || !cardListContainer || !prevButton || !nextButton) {
+      console.error('Не найдены элементы слайдера!');
+      return;
+  }
 
-    let currentIndex = 0;
-    const totalCards = cardItems.length;
-    const cardWidth = cardItems[0].offsetWidth;  // Важно вычислить здесь
+  let currentIndex = 0;
+  const totalCards = cardItems.length;
+  let cardWidth = cardListContainer.offsetWidth;
 
-    // Функция обновления положения слайдера
-    function updateSlider() {
-        const translateX = -currentIndex * cardWidth;
-        slider.style.transform = `translateX(${translateX}px)`;
-    }
+  // Функция обновления положения слайдера
+  function updateSlider() {
+      const translateX = -currentIndex * cardWidth;
+      slider.style.transform = `translateX(${translateX}px)`;
+  }
 
-    // Функция перехода к следующему слайду
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalCards;
-        updateSlider();
-    }
+  // Функция перехода к следующему слайду
+  function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalCards;
+      updateSlider();
+  }
 
-    // Функция перехода к предыдущему слайду
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + totalCards) % totalCards;
-        updateSlider();
-    }
+  // Функция перехода к предыдущему слайду
+  function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+      updateSlider();
+  }
 
-    // Привязка обработчиков событий к кнопкам
-    prevButton.addEventListener('click', prevSlide);
-    nextButton.addEventListener('click', nextSlide);
+  // Обработчики кликов на кнопки
+  prevButton.addEventListener('click', prevSlide);
+  nextButton.addEventListener('click', nextSlide);
 
-    // Начальная установка слайдера
-    updateSlider();
+  // Обработчик события resize
+  window.addEventListener('resize', () => {
+      cardWidth = cardListContainer.offsetWidth;
+      updateSlider();
+  });
+
+  // Начальная установка слайдера
+  updateSlider();
 });

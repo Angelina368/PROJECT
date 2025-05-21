@@ -7,7 +7,10 @@
     <title>DesInteri</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
+   
+       
+    
 </head>
 
 <body>
@@ -25,30 +28,27 @@
         <div class="settings-content">
             <h2 class="h2">Настройки</h2>
 
-        <section class="design-options">
+            <section class="design-options">
                 <h2 class="h2">Выбор темы</h2>
                 <div class="review-form">
                     <form class="design-options__form">
                         <label for="theme-select">Тема:</label>
                         <select id="theme-select">
-                        <option value="light">Светлая</option>
-                        <option value="dark">Темная</option>
+                            <option value="light">Светлая</option>
+                            <option value="dark">Темная</option>
                         </select>
                         <h2 class="h2">Выбор шрифта</h2>
-                        
+
                         <div class="font-options__form">
                             <label for="font-select">Шрифт:</label>
                             <select id="font-select">
-                            <option value="default">По умолчанию</option>
-                            <option value="arial">Arial</option>
-                            <option value="times-new-roman">Times New Roman</option>
-                            <option value="your-custom-font">Ваш шрифт</option>
-                            <!-- Добавьте другие шрифты здесь -->
+                                <option value="default">По умолчанию</option>
+                                <option value="times-new-roman">Times New Roman</option>
                             </select>
                         </div>
                     </form>
                 </div>
-        </section>
+            </section>
 
             <button id="close-settings">Закрыть</button>
         </div>
@@ -57,7 +57,7 @@
     <header class="header container">
         <img class="header__logo" src="images/logo.png" alt="Логотип">
         <h1 class="h1">DesInteri</h1>
-        <h2 class="h2">Онлайн-курс по дизайну интерьера</h2>   
+        <h2 class="h2">Онлайн-курс по дизайну интерьера</h2>
         <nav class="header__menu">
             <ul class="menu">
                 <li class="menu__item"><a class="menu__link main__button" href="index.html">Главная страница</a></li>
@@ -68,40 +68,40 @@
             </ul>
         </nav>
     </header>
-    
+
     <main class="main__container">
         <section class="intro">
             <h2 class="h2">Освойте дизайн интерьеров с нашими онлайн-курсами, охватывающими планировку пространства, теорию цвета и многое другое!</h2>
             <p class="p">Учитесь у профессионалов отрасли и создавайте потрясающие проекты. Начните обучение сегодня!</p>
         </section>
 
-         <section class="section__card" id="card">
+        <section class="section__card" id="card">
             <h2 class="h2">Наши преподаватели</h2>
             <p class="p">Немного о наших преподавателях.</p>
             <div class="card__list-container">
                 <ul class="card__list">
-                    <li class="card__item">
+                    <li class="card__item" data-teacher-id="1">
                         <a href="review1.html">
                             <img src="images/chel5.png" alt="Куршакова Юлия" class="card__image" width="200"
                                 height="200">
                             <h3 class="h3">Куршакова Юлия</h3>
                         </a>
                     </li>
-                    <li class="card__item">
+                    <li class="card__item" data-teacher-id="2">
                         <a href="review2.html">
                             <img src="images/chel.jpg" alt="Иванов Даниил" class="card__image" width="200"
                                 height="200">
                             <h3 class="h3">Иванов Даниил</h3>
                         </a>
                     </li>
-                    <li class="card__item">
+                    <li class="card__item" data-teacher-id="3">
                         <a href="review3.html">
                             <img src="images/chel4.png" alt="Нехорошков Данила" class="card__image" width="200"
                                 height="200">
                             <h3 class="h3">Нехорошков Данила</h3>
                         </a>
                     </li>
-                    <li class="card__item">
+                    <li class="card__item" data-teacher-id="4">
                         <a href="review4.html">
                             <img src="images/chel2.png" alt="Молотова Анна" class="card__image" width="200"
                                 height="200">
@@ -111,17 +111,18 @@
                 </ul>
             </div>
             <div class="slider-buttons">
-                <button class="prev-button">❮</button>
-                <button class="next-button">❯</button>
+                <button class="prev-button"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-button"><i class="fas fa-chevron-right"></i></button>
             </div>
         </section>
 
-           
+
     </main>
-        
+
     <footer class="footer">
-            <p class="p">8 800 555 35 55</p>
+        <p class="p">8 800 555 35 55</p>
     </footer>
 
-    </body>
-    </html> 
+</body>
+
+</html>

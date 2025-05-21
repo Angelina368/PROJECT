@@ -1,62 +1,49 @@
 .card {
     margin-top: 110px;
-    
 }
 
 .section__card {
-    width: 100%;
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 50px;
-    background-color: #ffd8a8;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
 }
 
-
 .card__list {
     display: flex;
-    padding-left: 0;
-    margin-top: 46px;
+    transition: transform 0.5s ease;
+    padding: 0;
     margin: 0;
-    transition: transform 0.3s ease;
     list-style: none;
 }
 
 .card__list-container {
     overflow: hidden;
-    width: 100%;
 }
 
 .card__item {
-    padding: 24px 24px 34px;
-    text-decoration: none;
-    align-content: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
     text-align: center;
-    border-radius: 24px;
-    background-color: #dcffdc;
-    box-shadow: 0 16px 72px 0 #ffd8a8;
-    transition: top 0.2s linear;
-    flex-shrink: 0;
-    width: 100%;
-    min-width: 250px;
-    box-sizing: border-box;   
+    /*  Убираем курсор  */
 }
 
-
 .card__item:hover {
-   background-color: #9efd9e;
-   color: #000000;
+    background-color: #9efd9e;
+    color: #000000;
 }
 
 .card__item:active {
-   background-color: #0dfc0d;
-   color: #ffffff;
+    background-color: #0dfc0d;
+    color: #ffffff;
 }
 
 .card__item:hover {
     top: 10px;
+}
+
+.card__image {
+    border-radius: 8px;
 }
 
 .card__icon {
@@ -84,23 +71,94 @@
     color: #846358;
 }
 
-
-/* Кнопки слайдера */
 .slider-buttons {
-    text-align: center;
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 0 10px;
 }
 
-.prev-button, .next-button {
-    background: none;
+.slider-buttons button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
     border: none;
+    padding: 10px;
     cursor: pointer;
-    font-size: 2em; /* Размер кнопок */
-    padding: 0 10px; /* Отступы */
-    color: #333; /* Цвет кнопок */
-    transition: color 0.2s;
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+.section__card:hover .slider-buttons {
+    opacity: 1;
+}
+.slider-buttons {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.prev-button:hover, .next-button:hover {
-    color: #846358; /* Цвет при наведении */
+/*стили для стрелок*/
+.prev-button, .next-button {
+    font-size: 24px; /* Увеличиваем размер стрелок */
+    line-height: 1; /* Убираем межстрочный интервал, чтобы стрелка выглядела больше */
+    width: 40px; /* Задаем ширину кнопки */
+    height: 40px; /* Задаем высоту кнопки */
+    border-radius: 50%; /* Делаем кнопки круглыми */
+    display: flex; /* Используем flexbox для центрирования содержимого */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для лучшей видимости */
+    color: white; /* Белый цвет стрелок */
+    border: none; /* Убираем обводку */
+    cursor: pointer; /* Меняем курсор на руку при наведении */
+    transition: background-color 0.3s ease; /* Плавное изменение фона при наведении */
 }
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
