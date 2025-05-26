@@ -1,0 +1,680 @@
+/* Общие стили для модального окна */
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none; /* Скрываем по умолчанию */
+  transition: opacity 0.3s ease;
+}
+
+.settings-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff; /* Белый фон для модального окна */
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 1001;
+  display: none; 
+  box-shadow:  rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.design-options {
+  margin-bottom: 20px;
+}
+
+.design-options__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.design-options__form label {
+  margin-bottom: 5px;
+}
+
+#close-settings {
+  background-color: #3e8e41; 
+  color: #000000; 
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* Стили для показа модального окна */
+.settings-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+.settings-modal.active {
+  display: block;
+  transform: translate(-50%, -50%) scale(1); /* Возвращаем к исходному размеру */
+  opacity: 1;
+}
+
+/* Стили для темной темы */
+body.dark {
+  background-color: #000000;
+  color: #000000;
+}
+
+body.dark.h1 {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.dark .settings-modal {
+  background-color: #444;
+  color: #000000;
+}
+
+/*  Общие стили для темной темы  */
+body.dark {
+  background-color: #000000; /* Черный фон */
+  color: #FFFFFF; /* Белый текст (общий) */
+}
+
+/* Раздел с карточками преподавателей (#card) */
+body.dark #card {
+  background-color: #121212; /*  Более светлый черный фон для секции  */
+  color: #EEEEEE; /*  Более светлый серый текст  */
+  padding: 20px;  /*Добавлено для наглядности*/
+  border-radius: 8px; /*Добавлено для наглядности*/
+}
+
+body.dark #card .h2, /* Если вы хотите, чтобы заголовки внутри card менялись */
+body.dark #card .h3 {
+  color: #FFFFFF; /* Белый цвет для заголовков */
+}
+
+body.dark #card .p {
+  color: #AAAAAA; /* Светло-серый для параграфов */
+}
+
+
+body.dark #card .card__item {
+  background-color: #363636; /*  Еще более светлый черный для карточки */
+  border: 1px solid #333333;
+  border-radius: 8px; /*Добавлено для наглядности*/
+  padding: 10px; /*Добавлено для наглядности*/
+  margin-bottom: 10px; /*Добавлено для наглядности*/
+}
+
+body.dark #card .card__item:hover {
+    background-color: #4d4d4d; /* Более темный фон при наведении */
+}
+
+body.dark #card .card__image {
+  /* Стиль для изображений, если нужно */
+  border-radius: 8px; /*  Например, скругление углов  */
+}
+
+body.dark #card .slider-buttons button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 5px; /* Для разделения кнопок */
+}
+
+body.dark #card .slider-buttons button:hover {
+  background-color: #646464;
+}
+
+/* Дополнительные стили для h2, h3 и других элементов (необязательно, если уже есть) */
+body.dark h2 { /* Если хотите, чтобы все h2 на странице менялись */
+  color: #000000;
+}
+body.dark h3 {
+  color: #000000;
+}
+
+/* Общие стили для темной темы */
+body.dark {
+  background-color: #000000; /* Черный фон */
+  color: #FFFFFF; /* Белый текст (общий) */
+}
+
+body.dark .main__container {
+  background-color: #121212; /*  Более светлый черный фон */
+  color: #EEEEEE; /* Более светлый серый текст */
+  padding: 20px; /*  Добавляем отступы для лучшего вида */
+  border-radius: 8px; /*  Скругляем углы для красоты */
+}
+
+body.dark .main__container .intro {
+    background-color: #121212; /* Более светлый черный фон для секции */
+    color: #EEEEEE; /*  Более светлый серый текст  */
+    padding: 20px;  /*Добавлено для наглядности*/
+    border-radius: 8px; /*Добавлено для наглядности*/
+    margin-bottom: 20px; /* Добавлено для отделения от других секций */
+}
+
+body.dark .main__container .intro .h2 {
+  color: #FFFFFF; /* Белый цвет для заголовков */
+}
+
+body.dark .main__container .intro .p {
+  color: #AAAAAA; /* Светло-серый для параграфов */
+}
+
+/* Общие стили для темной темы */
+body.dark {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/* Header */
+body.dark .header {
+  background-color: #1E1E1E; /* Темно-серый фон */
+  color: #FFFFFF; /* Белый текст */
+  border-bottom: 1px solid #333333; /* Разделительная линия */
+}
+
+
+body.dark .h1 {
+  color: #FFFFFF; /* Белый цвет для заголовка */
+}
+
+body.dark .header__menu .menu__link {
+  color: #c0c0c0; /* Светло-серый цвет для ссылок */
+}
+
+body.dark .header__menu .menu__link:hover {
+  color: #FFFFFF; /* Белый цвет при наведении на ссылку */
+}
+
+body.dark #settings-button {
+  background-color: #333; /* Цвет кнопки настроек */
+  color: #FFFFFF; /* Цвет текста на кнопке */
+  border: none;
+  padding: 5px 10px; /* Добавляем отступы */
+  border-radius: 0; /* Скругляем углы */
+  cursor: pointer;
+}
+
+body.dark #settings-button:hover {
+    background-color: #555; /* Изменение фона при наведении */
+}
+
+/* Общие стили для темной темы */
+body.dark {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/* Меню */
+body.dark .menu {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;       /* Убираем отступы по умолчанию */
+    margin: 0;        /* Убираем поля по умолчанию */
+    display: flex;     /* Располагаем элементы в строку */
+    align-items: center;  /* Выравниваем элементы по вертикали */
+}
+
+body.dark .menu__item {
+    margin-right: 0;  /* Добавляем отступ между элементами */
+}
+
+/* Стили для кнопок меню */
+body.dark .main__button {
+    display: block;          /* Занимает всю ширину li */
+    padding: 15px;      /* Добавляем отступы вокруг текста */
+    background-color: #333; /* Темно-серый фон */
+    color: #FFFFFF;         /* Белый текст */
+    text-decoration: none;    /* Убираем подчеркивание */
+    border-radius: 0;       /* Скругляем углы */
+    transition: background-color 0.3s ease; /* Плавный переход фона */
+
+    cursor: pointer;        /* Меняем курсор на указатель */
+}
+
+body.dark .main__button:hover {
+    background-color: #555; /* Более темный фон при наведении */
+}
+
+/* Футер */
+body.dark .footer {
+  background-color: #1E1E1E; /* Темно-серый фон для футера */
+  color: #FFFFFF; /* Белый текст в футере */
+  padding: 20px;  /* Отступы сверху и снизу, а также слева и справа */
+  text-align: center; /* Выравнивание текста по центру */
+}
+
+/* Стили для текста в футере (если нужно) */
+body.dark .footer .p {
+  color: #AAAAAA; /* Светло-серый цвет текста для параграфа */
+  font-size: 14px; /*  Можно уменьшить размер шрифта  */
+}
+
+/* Стили для кабинета (секция .cabinet) */
+body.dark .cabinet {
+  background-color: #121212; /* Темно-серый фон */
+  color: #EEEEEE; /* Светло-серый текст */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px; /*  Дополнительное расстояние от других элементов  */
+}
+
+
+/* Стили для информации о пользователе */
+body.dark .cabinet__user-info {
+    display: flex;           /* Располагаем элементы в ряд */
+    flex-wrap: wrap;        /* Переносим элементы при необходимости */
+    justify-content: space-around; /*  Равномерное распределение  */
+    align-items: auto;
+   
+}
+
+/* Стили для окон данных */
+body.dark .cabinet__data-window {
+    background-color: #212121;  /* Еще более темный фон */
+    color: #AAAAAA;             /* Еще более светлый текст */
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;              /* Отступы вокруг каждого окна */
+    text-align: center;          /* Выравниваем текст по центру */
+}
+
+/* Стили для изображений (если необходимо) */
+body.dark .cabinet .card__image {
+  border: 0 solid #333; /*  Рамка для изображения */
+}
+
+/* Стили для имени пользователя и оплаченного курса */
+body.dark .cabinet p {
+  color: #BBBBBB;
+  text-align: left;
+}
+
+body.dark .cabinet span {
+    color: #FFFFFF;  /* Белый цвет для значения (имя, курс) */
+    font-weight: bold; /*  Жирный шрифт (если необходимо)  */
+}
+
+/* Стили для контейнера формы */
+body.dark .form-container {
+  background-color: #121212; /* Темно-серый фон */
+  color: #EEEEEE; /* Светло-серый текст */
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px; /* Добавляем немного пространства снизу */
+  text-align: center;   /* Выравниваем контент по центру */
+}
+
+/* Стили для заголовка формы */
+body.dark .form-title {
+  color: #FFFFFF; /* Белый заголовок */
+  margin-bottom: 20px;
+}
+
+/* Стили для формы */
+body.dark .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+/* Стили для полей ввода */
+body.dark .input {
+  background-color: #333;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 4px;
+  box-sizing: border-box; /*  Чтобы padding не увеличивал ширину  */
+}
+
+/* Стили для placeholder */
+body.dark .input::placeholder {
+  color: #AAAAAA; /* Светло-серый цвет placeholder'a */
+}
+
+/* Стили для кнопки отправки */
+body.dark .btn {
+  background-color: #555;
+  color: #FFFFFF;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+}
+
+body.dark .btn:hover {
+  background-color: #777; /*  Более темный цвет при наведении  */
+}
+
+/* Стили для ссылок */
+body.dark .link {
+  margin-top: 20px;
+  color: #BBBBBB; /* Светло-серый цвет текста */
+}
+
+body.dark .link a {
+  color: #FFFFFF; /* Белый цвет ссылок */
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
+body.dark .link a:hover {
+  text-decoration: underline; /* Подчеркиваем при наведении */
+}
+
+
+body.dark .main__button:hover {
+  background-color: #555;
+}
+
+/* Стили для карточки отзыва */
+body.dark .review__card {
+  background-color: #212121; /* Еще более темный фон */
+  color: #AAAAAA; /* Еще более светлый текст */
+  padding: 20px;
+}
+
+/* Стили для изображений */
+body.dark .card__image {
+  border-radius: 50%;
+  border: 2px solid #333;
+  display: block; /* Чтобы центрировать изображение */
+  margin: 0 auto 20px; /*  Отступы и автоматическое центрирование */
+}
+
+/* Стили для заголовков h4 */
+body.dark .review__card h4 {
+  color: #FFFFFF; /* Белый цвет для заголовка "Отзывы" */
+  margin-top: 20px; /* Отступ сверху */
+  margin-bottom: 10px;
+}
+
+/* Стили для секции добавления отзыва */
+body.dark #add-review-section {
+  background-color: #212121; /* Еще более темный фон */
+  color: #AAAAAA; /* Еще более светлый текст */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+body.dark #add-review-section h3 {
+    color: #FFFFFF; /* Белый цвет для заголовка "Оставить отзыв" */
+    margin-bottom: 10px;
+}
+
+/* Стили для текстовой области отзыва */
+body.dark #review-text {
+  background-color: #333;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box; /* Важно, чтобы padding не увеличивал ширину */
+  margin-bottom: 10px;
+}
+
+body.dark #review-text::placeholder {
+  color: #AAAAAA; /* Светло-серый цвет placeholder'a */
+}
+
+/* Стили для заголовка преподавателя */
+body.dark #teacher-name {
+  color: #FFFFFF; /* Белый цвет для имени преподавателя */
+  text-align: center; /* Выравнивание по центру */
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Стили для grid отзывов */
+body.dark .review__grid {
+    display: grid;
+    grid-template-columns: 1fr; /*  Один столбец на маленьких экранах  */
+    gap: 20px;
+}
+
+/* Заголовок "Каталог курсов" */
+body.dark h1 {
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* Секция intro */
+body.dark .intro {
+  background-color: #121212;
+  color: #EEEEEE;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+body.dark .intro h2 {
+  color: #FFFFFF;
+}
+
+body.dark .intro p {
+  color: #AAAAAA;
+}
+
+/* Контейнер курсов */
+body.dark .courses-container {
+  display: flex;  
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивный макет */
+  gap: 20px;
+  flex-wrap: wrap;        /* Переносим карточки на новую строку, если не хватает места */
+  justify-content: space-around; /* Распределяем карточки равномерно по ширине контейнера */
+  padding: 20px;
+}
+
+/* Карточка курса */
+body.dark .course__card {
+  background-color: #212121;
+  color: #AAAAAA;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center; /* Выравнивание контента по центру */
+}
+
+/* Изображение курса */
+body.dark .course__card .card__image {
+  border-radius: 50%;
+  border: 2px solid #333;
+  margin-bottom: 10px;
+  display: block; /* Чтобы центрировать изображение */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Название курса */
+body.dark .course__card .courses__name {
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+/* Цена курса */
+body.dark .course__card .courses__price {
+  margin-bottom: 5px;
+  color: #FFFFFF;
+}
+
+/* Рейтинг курса */
+body.dark .course__card .courses__rating {
+  margin-bottom: 15px;
+  color: #FFFFFF;
+}
+
+/* Кнопка "Добавить в корзину" */
+body.dark .add-to-cart-button {
+  background-color: #333;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Кнопка на всю ширину карточки */
+  box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+}
+
+body.dark .add-to-cart-button:hover {
+  background-color: #555;
+}
+
+body.dark .cart {
+  background-color: #121212;
+  color: #EEEEEE;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Стили для заголовка "Корзина" */
+body.dark .cart h2 {
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+/* Стили для списка товаров в корзине */
+body.dark #cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #000000;
+}
+
+/* Стили для каждого товара в корзине (если нужно) */
+body.dark #cart-items li {
+  /* Добавьте стили для каждого отдельного товара */
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+/* Стили для "Итого" */
+body.dark .cart p {
+  color: #AAAAAA;
+  margin-top: 15px;
+}
+
+/* Стили для общей суммы */
+body.dark .cart #cart-total {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+/* Стили для кнопки "Перейти к оплате" */
+body.dark #checkout-button {
+  background-color: #333;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+body.dark #checkout-button:hover {
+  background-color: #555;
+}
+
+/* --- Стили для окна оплаты --- */
+
+/* Стили для overlay */
+body.dark .overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный */
+}
+
+/* Стили для формы оплаты */
+body.dark .payment-form {
+  background-color: #212121;
+  color: #EEEEEE;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Стили для заголовка "Оплата" */
+body.dark .payment-form h2 {
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+/* Стили для label */
+body.dark .payment-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #AAAAAA;
+}
+
+/* Стили для input */
+body.dark .payment-form input[type="text"],
+body.dark .payment-form input[type="email"] {
+  background-color: #333;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  width: 100%; /* Занимает всю ширину */
+  box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+}
+
+body.dark .payment-form input[type="text"]::placeholder,
+body.dark .payment-form input[type="email"]::placeholder {
+  color: #AAAAAA;
+}
+
+/* Стили для кнопки "Оплатить" в форме */
+body.dark .payment-form button[type="submit"] {
+  background-color: #333;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+body.dark .payment-form button[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Стили для кнопки закрытия формы */
+body.dark .close-button {
+  color: #FFFFFF;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+body.dark .preloader {
+  background-color: #121212; /* Темно-серый фон */
+}
+
+body.dark .preloader__item {
+  background-color: #BB86FC; /* Фиолетовый цвет для элементов анимации */
+}
+
+/* Можно добавить дополнительные стили для улучшения видимости */
+body.dark .preloader__row {
+  /* Пример: увеличьте отступ между элементами */
+  margin: 0 15px;
+}

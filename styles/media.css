@@ -1,0 +1,19 @@
+@media only screen and (max-width: 1024px) {
+    /* Обращение к классам */
+    
+    .container {
+        max-width: 100%;
+    }
+
+    .card__item {
+        flex-wrap: wrap;
+    }
+
+    .courses {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,145 @@
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffd8a8;
+    z-index:200;
+    position: fixed; 
+    top: 0;
+    left: 0;
+}
+
+.header__list {
+    display: flex; ;/*Используем flexbox для выравнивания списка в строку*/
+    justify-content: space-between; /* распределяем элементы по ширине*/ 
+    gap: 40px; /*промежуток между ссылками */
+}
+
+.header__link {
+    font-size: 20px; /*размер текста ссылок*/
+    font-weight: 400; /*толщина шрифта */
+    text-decoration: none; /*убираем подчеркивание ссылок*/
+    color: #fff; /*цвет текста*/
+}
+
+.header__logo {
+    width: 150px;
+    height: auto;
+}
+
+
+.header__subtitle {
+    font-size: 20px;
+}
+
+.header__menu {
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Равномерное распределение */
+    align-items: center;
+    height: 100%;
+    background-color: #ffd8a8;
+}
+
+.menu__item {
+    margin: 0; /* Убираем стандартные отступы */
+    display: flex;      /* Чтобы кнопка была выровнена по центру */
+    align-items: center;  /* Выравниваем кнопку по вертикали */
+    justify-content: center; /* Выравниваем кнопку по горизонтали */
+}
+
+.menu__link {
+    display: block;
+    padding: 100%;
+    text-decoration: none;
+    color: #333;
+    border-radius: 15px;
+    min-width: 100px;      /* Установите минимальную ширину для кнопок */
+    text-align: center;
+    box-sizing: none;
+}
+
+.menu__link:hover {
+    background-color:  #ffd8a8;
+}
+
+.main__button {
+    text-decoration: blink;
+    padding: 20px;
+    background-color:#ffd8a8;
+    border-radius: 0;
+    transition: background-color 0.3s;
+    color: rgb(31, 30, 30);
+}
+
+.main__button:hover {
+    background-color: #7cd485;
+}
+
+.h1 {
+    /* Стили для заголовка h1, если нужно */
+    margin: 0;
+}
+
+.h2 {
+    /* Стили для заголовка h2, если нужно */
+    margin: 0;
+}
+.settings-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#settings-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px; 
+ 
+}
+
+
+#settings-button img {
+    display: 10px;  
+}
+
+
+
+.settings-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.settings-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+
+
+
+
+
+
+

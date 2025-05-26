@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы о преподавателе</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/review.css">
+    
+</head>
+   
+<body>
+    <div class="preloader" id="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+
+   
+    <div class="page-content" id="page-content">
+    <header class="header container">
+        <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+        <h1 class="h1">DesInteri</h1>
+        <nav class="header__menu">
+            <ul class="menu">
+                <li class="menu__item"><a class="menu__link main__button" href="index.html">Главная страница</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="cabinet.html">Личный кабинет</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="courses.html">Каталог курсов</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="registr.html">Вход/Регистрация</a></li>
+                <div class="container"></div>
+                    <button id="settings-button">
+                <img src="images/settings.png" alt="Настройки" width="42" height="30">
+            </button>
+        </div>
+
+
+        <div class="settings-overlay" id="settings-overlay"></div>
+
+        <div class="settings-modal" id="settings-modal">
+            <div class="settings-content">
+                <h2 class="h2">Настройки</h2>
+
+                <section class="design-options">
+                    <h2 class="h2">Выбор темы</h2>
+                    <div class="review-form">
+                        <form class="design-options__form">
+                            <label for="theme-select">Тема:</label>
+                            <select id="theme-select">
+                                <option value="light">Светлая</option>
+                                <option value="dark">Темная</option>
+                            </select>
+                        </form>
+                    </div>
+                </section>
+
+                <button id="close-settings">Закрыть</button>
+            </div>
+        </div>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <button onclick="window.location.href='index.html'">Назад</button>
+        <h1 id="teacher-name">Нехорошков Данила</h1>
+        <div id="teacher-details"></div>
+        <div class="review__grid">
+            <div class="review__card"> 
+                <img src="images/chel4.png" alt="Нехорошков Данила" class="card__image" width="200" height="200">
+                <p>Преподаватель по курсам декорирование в дизайне интерьера, 3D-визуализатор</p>
+                <h4>Отзывы</h4>
+                <p>🌟 Отзыв от Алевтины: 
+                    "Курсы по декорированию в дизайне интерьера были невероятно полезными! Преподаватель вдохновляет на творчество и помогает каждому студенту раскрыть свой потенциал. Я научилась сочетать цвета, текстуры и формы, а также использовать 3D-визуализацию для представления своих идей. Это было лучшее решение для моего профессионального роста!"
+                </p>
+                <p>🌟 Отзыв от Евгении: 
+                    "Я прошла курс 3D-визуализации и осталась в полном восторге! Преподаватель объясняет сложные вещи простым языком и всегда готов помочь. Практические задания помогли мне освоить программу, и теперь я могу создавать красивые визуализации для своих клиентов. Рекомендую всем, кто хочет развиваться в дизайне!"
+                </p>    
+            </div>
+            
+            <section id="add-review-section">
+                <h3>Оставить отзыв:</h3>
+                <form id="review-form">
+                    <label for="review-text">Ваш отзыв:</label>
+                    <textarea id="review-text" name="review-text" rows="4" required></textarea>
+                    <button type="submit" class="main__button">Отправить</button>
+                </form>
+            </section>
+        </div>
+    </main>
+</div>
+</body>
+<script src="js/script.js"></script>
+</html>

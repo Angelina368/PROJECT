@@ -1,0 +1,148 @@
+main {
+   margin-top: 120px; /*  Отступ для main, чтобы избежать перекрытия хедером.  Подберите значение под свою высоту хедера */
+   
+    height: 100% /* задаем высоту прямо, чтобы увидеть контент ниже */
+}
+
+.main__container {
+    max-width: 1440px;
+    margin: 150px;
+    padding: 210px;
+    background-color: #ffd8a8; 
+    padding: 25px;
+    border-radius: 5px; 
+    padding-top: 100px; 
+    margin-top: 200px;
+    min-height: 800px;
+}
+
+.intro {
+    margin-bottom: 30px;
+}
+
+.teachers {
+    margin-bottom: 30px;
+}
+
+.teacher__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.teacher__card {
+    border: 1px solid #71BC78;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    max-width: 80px;
+    
+}
+
+.teacher__image {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.teacher__item {
+    width: 360px; /*устанавливаем ширину для каждого элемента*/
+    transition: 0.3s ease; /* плавное изменение отображения длительностью 0.3 секунды
+*/
+   }
+.teacher__link {
+    border: none; /* убираем рамку у кнопки*/
+    margin-top: 20px; /*отступ сверху*/
+    color: #ff0008; /*цвет текста*/
+    cursor: pointer; /* курсор меняем на указатель */
+}
+
+.section__title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 62px;
+    margin-top: 500;
+    margin-bottom: 17px;
+}
+
+.section__title,
+.section__description {
+    max-width: 700px;
+}
+
+.section__description {
+    line-height: 32px;
+}
+
+.section__title--center,
+.section__description--center {
+    text-align: center;
+    max-width: 100%;
+}
+
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+        display: none; /* Скрываем изначально */
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Чтобы быть поверх всего */
+    }
+    
+    .payment-form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        max-width: 400px;
+        position: relative; /* Для кнопки закрытия */
+    }
+    
+    .payment-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .payment-form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    .payment-form input[type="text"],
+    .payment-form input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+    }
+    
+    .payment-form button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    .payment-form button[type="submit"]:hover {
+        background-color: #3e8e41;
+    }
+    
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        color: #888;
+    }

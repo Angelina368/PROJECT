@@ -1,0 +1,33 @@
+.registr {
+    background-color: #fff9db;
+}
+
+.registr .container.main {
+    background-color: initial; 
+}
+
+
+.link a {
+    color: #28a132;
+    text-decoration: none;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

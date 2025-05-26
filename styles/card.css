@@ -1,0 +1,164 @@
+.card {
+    margin-top: 110px;
+}
+
+.section__card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card__list {
+    display: flex;
+    transition: transform 0.5s ease;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.card__list-container {
+    overflow: hidden;
+}
+
+.card__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    /*  Убираем курсор  */
+}
+
+.card__item:hover {
+    background-color: #9efd9e;
+    color: #000000;
+}
+
+.card__item:active {
+    background-color: #0dfc0d;
+    color: #ffffff;
+}
+
+.card__item:hover {
+    top: 10px;
+}
+
+.card__image {
+    border-radius: 8px;
+}
+
+.card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 24px;
+    line-height: 30px;
+    border-radius: 12px;
+    background-color: rgba(255, 239, 204, 1);
+}
+
+.card__title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #c0907f;
+}
+
+.card__description {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #846358;
+}
+
+.slider-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 0 10px;
+}
+
+.slider-buttons button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+.section__card:hover .slider-buttons {
+    opacity: 1;
+}
+.slider-buttons {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/*стили для стрелок*/
+.prev-button, .next-button {
+    font-size: 24px; /* Увеличиваем размер стрелок */
+    line-height: 1; /* Убираем межстрочный интервал, чтобы стрелка выглядела больше */
+    width: 40px; /* Задаем ширину кнопки */
+    height: 40px; /* Задаем высоту кнопки */
+    border-radius: 50%; /* Делаем кнопки круглыми */
+    display: flex; /* Используем flexbox для центрирования содержимого */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для лучшей видимости */
+    color: white; /* Белый цвет стрелок */
+    border: none; /* Убираем обводку */
+    cursor: pointer; /* Меняем курсор на руку при наведении */
+    transition: background-color 0.3s ease; /* Плавное изменение фона при наведении */
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

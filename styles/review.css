@@ -1,0 +1,98 @@
+h1, h2 {
+    color: #846358;
+    margin-top: 150px ;
+}
+
+
+/* Карточка преподавателя и отзывы */
+#teacher-name {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 50px;
+}
+
+#teacher-details {
+    margin-bottom: 30px;
+}
+
+.review__grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+}
+
+.review__card {
+    background-color: #ffd8a8;
+    border-radius: 20px;
+    box-shadow: #846358;
+    padding: 10px;
+    text-align: left;
+    transition: transform 0.2s ease;
+}
+
+.review__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card__image {
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    display: block; 
+}
+
+.card__title, h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  font-weight: 60;
+  text-align: center;
+}
+
+.review__card p {
+    font-size: 1em;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+
+
+#add-review-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffd8a8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#review-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#review-form textarea {
+    width: 99%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    resize: vertical; 
+}
+
+#review-form button {
+    background-color: #67d867;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#review-form button:hover {
+    background-color: #4CAF50;
+}

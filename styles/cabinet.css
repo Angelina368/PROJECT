@@ -1,0 +1,31 @@
+.cabinet {
+    max-width: 800px;
+    width: 100%;
+    margin: 155px auto;
+    padding: 10px;
+    background-color: #ffd8a8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    box-sizing: content-box;
+    
+}
+
+/* Окошки с данными */
+.cabinet__data-window {
+    padding: 20px;           
+    margin-bottom: 20px;    
+    border: 1px solid #eee;   
+    border-radius: 15px;      
+    background-color: #fff;   
+}
+
+/* User Info */
+.cabinet__user-info {
+    display: flex;            
+    flex-direction: column;   
+}
+
+.cabinet__user-info .cabinet__data-window {
+    margin-bottom: 10px;   
+}

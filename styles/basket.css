@@ -1,0 +1,278 @@
+body {
+    font-family: sans-serif;
+    background-color: #fff0db;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #846358;
+    text-align: center;
+    margin-top: 200px ;
+}
+
+/* Стили для каталога курсов */
+.course__card {
+    background-color: #dcffdc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Фиксированная ширина плашки */
+    margin-right: 20px; /* Отступ между плашками */
+    display: inline-block; /* Отображаем как плашки */
+    vertical-align: top; /* Выравниваем по верхнему краю */
+}
+
+.courses__name {
+    color: #846358;
+}
+
+.courses__price {
+    font-weight: bold;
+}
+
+/* Общий стиль для кнопок добавления */
+.add-to-cart-button {
+    background-color: #2ecc71;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    display: block; /* Чтобы кнопка занимала всю ширину плашки */
+    margin-top: 10px;
+}
+
+.add-to-cart-button {
+    background-color: #67d867;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: auto; 
+    
+}
+
+.add-to-cart-button:hover {
+    background-color: #4CAF50;
+}
+
+
+
+/* Стили для корзины */
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    background-color: #fff9f2;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-item {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.remove-item:hover {
+    background-color: #846358;
+}
+
+#cart-total {
+    font-weight: bold;
+    color: #e67e22;
+}
+
+.card__image {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.course-container {
+    display: flex;            /* Use flexbox to align the courses in a row */
+    flex-wrap: wrap;          /* Allow courses to wrap to the next line */
+    justify-content: flex-start; /* Align items to the start of the container */
+    padding: 20px;             /* Add some padding around the courses */
+    background-color: #fff0db;   /* Match the body background color */
+}
+
+#checkout-button {
+    background-color: #67d867; 
+    color: rgb(0, 0, 0); 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 1em; 
+    transition: background-color 0.3s ease; 
+    display: block; 
+    margin: 20px auto; 
+}
+
+#checkout-button:hover {
+    background-color: #4CAF50; 
+}
+
+
+
+/* --- Общие стили для секции корзины и модального окна --- */
+.cart, .payment-form {
+    font-family: 'Nunito', Arial, sans-serif; /*  Используем основной шрифт сайта */
+    color: #333; /*  Основной цвет текста */
+    background-color: #fff; /*  Белый фон */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*  Небольшая тень для визуального выделения */
+}
+
+/* --- Стили для секции корзины --- */
+.cart {
+    margin: 20px auto; /* Центрируем по горизонтали и добавляем отступы */
+    padding: 20px;
+    width: 80%; /*  Занимает 80% ширины контейнера */
+    max-width: 960px; /*  Ограничиваем максимальную ширину */
+    border-radius: 8px; /*  Более мягкие углы */
+}
+
+.cart h2 {
+    font-size: 24px; /*  Увеличиваем размер заголовка */
+    font-weight: 700; /*  Делаем заголовок жирным */
+    margin-bottom: 15px;
+    color: #4CAF50; /*  Используем цвет, сочетающийся с кнопками "Оплатить" */
+    text-align: center; /*  Центрируем заголовок */
+}
+
+#cart-items {
+    list-style: none; /*  Убираем маркеры списка */
+    padding: 0;
+}
+
+#cart-items li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; /*  Тонкая линия-разделитель */
+    display: flex;
+    justify-content: space-between; /*  Размещаем название и цену по краям */
+    align-items: center; /*  Выравниваем по вертикали */
+}
+
+#cart-items li:last-child {
+    border-bottom: none; /* Убираем черту у последнего элемента */
+}
+
+#cart-total {
+    font-size: 18px; /*  Увеличиваем размер текста */
+    font-weight: 600; /*  Делаем текст полужирным */
+    color: #4CAF50; /*  Цвет суммы */
+}
+
+/* --- Стили для модального окна оплаты --- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.payment-form {
+    width: 90%; /*  Ширина 90% от экрана */
+    max-width: 500px; /*  Ограничиваем максимальную ширину */
+    padding: 30px;
+    border-radius: 10px; /*  Более мягкие углы */
+    position: relative;
+}
+
+.payment-form h2 {
+    font-size: 28px; /*  Увеличиваем размер заголовка */
+    margin-bottom: 25px;
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500; /*  Делаем подписи полужирными */
+    color: #555;
+}
+
+.payment-form input[type="text"],
+.payment-form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /*  Более светлая граница */
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px; /*  Увеличиваем размер текста в полях */
+}
+
+.payment-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px; /*  Увеличиваем размер текста на кнопке */
+    width: 100%;
+    transition: background-color 0.3s ease; /*  Плавная смена цвета при наведении */
+}
+
+.payment-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.payment-form .close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px; /*  Увеличиваем размер кнопки закрытия */
+    cursor: pointer;
+    color: #777;
+    transition: color 0.3s ease; /*  Плавная смена цвета при наведении */
+}
+
+.payment-form .close-button:hover {
+    color: #333;
+}
+
+/*  Адаптивность для маленьких экранов */
+@media (max-width: 600px) {
+    .payment-form {
+        padding: 20px;
+    }
+
+    .payment-form h2 {
+        font-size: 24px;
+    }
+
+    .payment-form input[type="text"],
+    .payment-form input[type="email"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .payment-form button[type="submit"] {
+        font-size: 16px;
+    }
+}
+

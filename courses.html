@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простая корзина с курсами</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/basket.css">
+    
+</head>
+<body>
+    <div class="preloader" id="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+
+   
+    <div class="page-content" id="page-content">
+    <header class="header container">
+        <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+        <h1 class="h1">DesInteri</h1>
+        <nav class="header__menu">
+            <ul class="menu">
+                <li class="menu__item"><a class="menu__link main__button" href="index.html">Главная страница</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="cabinet.html">Личный кабинет</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="courses.html">Каталог курсов</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="registr.html">Вход/Регистрация</a></li>               
+            </ul>
+        </nav>
+    </header>
+    <main>
+ <h1>Каталог курсов</h1>
+        <section class="intro">
+            <h2 class="h2">Добро пожаловать на страницу наших курсов!</h2>
+            <p class="p">Мы рады предложить широкий выбор курсов, которые помогут вам развить навыки, повысить квалификацию и достичь ваших образовательных целей. Наши программы разработаны с учетом современных требований и тенденций, чтобы обеспечить вам качественное образование и практические знания.</p>
+            <div class="courses-container">
+                <div class="course__card" data-course-id="1" data-course-name="Дизайн интерьеров" data-course-price="0">
+                    <img src="images/ди.jpg" alt="Дизайн интерьеров" class="card__image" width="200" height="200">
+                    <h3 class="courses__name">Дизайн интерьеров</h3>
+                    <h4 class="courses__price">Цена: бесплатно</h4>
+                    <h4 class="courses__rating">Оценка: 5</h4>
+                    <button class="add-to-cart-button">Добавить в корзину</button>
+                </div>
+
+                <div class="course__card" data-course-id="2" data-course-name="Дизайн жилых и коммерческих помещений" data-course-price="2500">
+                    <img src="images/джп.jpg" alt="Дизайн жилых и коммерческих помещений" class="card__image" width="200" height="200">
+                    <h3 class="courses__name">Дизайн жилых и коммерческих помещений</h3>
+                    <h4 class="courses__price">Цена: 2500</h4>
+                    <h4 class="courses__rating">Оценка: 4</h4>
+                    <button class="add-to-cart-button">Добавить в корзину</button>
+                </div>
+
+                <div class="course__card" data-course-id="3" data-course-name="Декоратор интерьера" data-course-price="3500">
+                    <img src="images/деки.jpg" alt="Декоратор интерьера" class="card__image" width="200" height="200">
+                    <h3 class="courses__name">Декоратор интерьера</h3>
+                    <h4 class="courses__price">Цена: 3500</h4>
+                    <h4 class="courses__rating">Оценка: 5</h4>
+                    <button class="add-to-cart-button">Добавить в корзину</button>
+                </div>
+
+                <div class="course__card" data-course-id="4" data-course-name="Дизайнер мебели" data-course-price="1500">
+                    <img src="images/дм.jpg" alt="Дизайнер мебели" class="card__image" width="200" height="200">
+                    <h3 class="courses__name">Дизайнер мебели</h3>
+                    <h4 class="courses__price">Цена: 1500</h4>
+                    <h4 class="courses__rating">Оценка: 4,5</h4>
+                    <button class="add-to-cart-button">Добавить в корзину</button>
+                </div>
+
+                <div class="course__card" data-course-id="5" data-course-name="Дизайн интерьеров" data-course-price="0">
+                    <img src="images/ди.jpg" alt="Дизайн интерьеров" class="card__image" width="200" height="200">
+                    <h3 class="courses__name">Дизайн интерьеров</h3>
+                    <h4 class="courses__price">Цена: бесплатно</h4>
+                    <h4 class="courses__rating">Оценка: 5</h4>
+                    <button class="add-to-cart-button">Добавить в корзину</button>
+                </div>
+
+                <div class="course__card" data-course-id="6" data-course-name="Дизайн жилых и коммерческих помещений" data-course-price="2500">
+                    <img src="images/джп.jpg" alt="Дизайн жилых и коммерческих помещений" class="card__image" width="200" height="200">
+                    <h3 class="courses__name">Дизайн жилых и коммерческих помещений</h3>
+                    <h4 class="courses__price">Цена: 2500</h4>
+                    <h4 class="courses__rating">Оценка: 4</h4>
+                    <button class="add-to-cart-button">Добавить в корзину</button>
+                </div>
+
+                <div class="course__card" data-course-id="7" data-course-name="Декоратор интерьера" data-course-price="3500">
+                    <img src="images/деки.jpg" alt="Декоратор интерьера" class="card__image" width="200" height="200">
+                    <h3 class="courses__name">Декоратор интерьера</h3>
+                    <h4 class="courses__price">Цена: 3500</h4>
+                    <h4 class="courses__rating">Оценка: 5</h4>
+                    <button class="add-to-cart-button">Добавить в корзину</button>
+                </div>
+
+                <div class="course__card" data-course-id="8" data-course-name="Дизайнер мебели" data-course-price="1500">
+                    <img src="images/дм.jpg" alt="Дизайнер мебели" class="card__image" width="200" height="200">
+                    <h3 class="courses__name">Дизайнер мебели</h3>
+                    <h4 class="courses__price">Цена: 1500</h4>
+                    <h4 class="courses__rating">Оценка: 4,5</h4>
+                    <button class="add-to-cart-button">Добавить в корзину</button>
+                </div>
+
+                <div class="course__card" data-course-id="9" data-course-name="Дизайнер мебели" data-course-price="1500">
+                    <img src="images/дм.jpg" alt="Дизайнер мебели" class="card__image" width="200" height="200">
+                    <h3 class="courses__name">Дизайнер мебели</h3>
+                    <h4 class="courses__price">Цена: 1500</h4>
+                    <h4 class="courses__rating">Оценка: 4,5</h4>
+                    <button class="add-to-cart-button">Добавить в корзину</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cart">  <!--  Создаем секцию для корзины  -->
+            <h2>Корзина</h2>
+            <ul id="cart-items">
+                <!-- Товары, добавленные в корзину, будут отображаться здесь -->
+            </ul>
+<p>Итого: <span id="cart-total">0</span> руб.</p>
+    <button id="checkout-button" class="main__button">Перейти к оплате</button>
+</section>
+    <!-- --- Окно оплаты --- -->
+    <div class="overlay" id="payment-overlay">
+        <div class="payment-form">
+            <span class="close-button" id="close-payment-form">&times;</span>
+            <h2>Оплата</h2>
+            <form id="payment-form">
+                <label for="card-number">Номер карты:</label>
+                <input type="text" id="card-number" name="card_number" required>
+
+                <label for="expiry-date">Срок действия:</label>
+                <input type="text" id="expiry-date" name="expiry_date" placeholder="MM/ГГ" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="amount">Сумма к оплате:</label>
+                <input type="text" id="amount" name="amount" readonly>  <!-- Сумма будет заполнена автоматически -->
+
+                <button type="submit">Оплатить</button>
+            </form>
+        </div>
+    </div>
+    
+    </main>
+    <script src="js/basket.js"></script>
+    <script src="js/script.js"></script>
+    
+</div>
+</body>
+</html>

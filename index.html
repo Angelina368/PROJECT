@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesInteri</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+<div class="preloader" id="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+
+   
+    <div class="page-content" id="page-content">
+    
+    <header class="header container">
+        <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+        <h1 class="h1">DesInteri</h1>
+        <nav class="header__menu">
+            <ul class="menu">
+                <li class="menu__item"><a class="menu__link main__button" href="index.html">Главная страница</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="cabinet.html">Личный кабинет</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="courses.html">Каталог курсов</a></li>
+                <li class="menu__item"><a class="menu__link main__button" href="registr.html">Вход/Регистрация</a></li>
+                <div class="container"></div>
+                    <button id="settings-button">
+                <img src="images/settings.png" alt="Настройки" width="42" height="30">
+            </button>
+        </div>
+
+
+        <div class="settings-overlay" id="settings-overlay"></div>
+
+        <div class="settings-modal" id="settings-modal">
+            <div class="settings-content">
+                <h2 class="h2">Настройки</h2>
+
+                <section class="design-options">
+                    <h2 class="h2">Выбор темы</h2>
+                    <div class="review-form">
+                        <form class="design-options__form">
+                            <label for="theme-select">Тема:</label>
+                            <select id="theme-select">
+                                <option value="light">Светлая</option>
+                                <option value="dark">Темная</option>
+                            </select>
+                        </form>
+                    </div>
+                </section>
+
+                <button id="close-settings">Закрыть</button>
+            </div>
+        </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main__container">
+        <section class="intro">
+            <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/1.jpg" alt="Slide 1" class="swiper-slide-image" width="1440">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/2.jpg" alt="Slide 2" class="swiper-slide-image" width="1440">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/3.jpg" alt="Slide 3" class="swiper-slide-image" width="1440">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/4.jpg" alt="Slide 4" class="swiper-slide-image" width="1440">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/5.jpg" alt="Slide 5" class="swiper-slide-image" width="1440">
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+            <h2 class="h2">Освойте дизайн интерьеров с нашими онлайн-курсами, охватывающими планировку пространства, теорию цвета и многое другое!</h2>
+            <p class="p">Учитесь у профессионалов отрасли и создавайте потрясающие проекты. Начните обучение сегодня!</p>
+            
+        </section>
+
+        <section class="section__card" id="card">
+            <h2 class="h2">Наши преподаватели</h2>
+            <p class="p">Немного о наших преподавателях.</p>
+            <div class="card__list-container">
+                <ul class="card__list">
+                    <li class="card__item" data-teacher-id="1">
+                        <a href="review1.html">
+                            <img src="images/chel5.png" alt="Куршакова Юлия" class="card__image" width="200"
+                                height="200">
+                            <h3 class="h3">Куршакова Юлия</h3>
+                        </a>
+                    </li>
+                    <li class="card__item" data-teacher-id="2">
+                        <a href="review2.html">
+                            <img src="images/chel.jpg" alt="Иванов Даниил" class="card__image" width="200"
+                                height="200">
+                            <h3 class="h3">Иванов Даниил</h3>
+                        </a>
+                    </li>
+                    <li class="card__item" data-teacher-id="3">
+                        <a href="review3.html">
+                            <img src="images/chel4.png" alt="Нехорошков Данила" class="card__image" width="200"
+                                height="200">
+                            <h3 class="h3">Нехорошков Данила</h3>
+                        </a>
+                    </li>
+                    <li class="card__item" data-teacher-id="4">
+                        <a href="review4.html">
+                            <img src="images/chel2.png" alt="Молотова Анна" class="card__image" width="200"
+                                height="200">
+                            <h3 class="h3">Молотова Анна</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="slider-buttons">
+                <button class="prev-button"><i class="fas fa-chevron-left">«</i></button>
+                <button class="next-button"><i class="fas fa-chevron-right">»</i></button>
+            </div>
+        </section>
+
+
+    </main>
+
+    
+
+    <footer class="footer">
+        <p class="p">Работали: Демьянова А. Куршакова Ю. Пастухова А.</p>
+    </footer>
+</div>
+<script src="js/script.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>

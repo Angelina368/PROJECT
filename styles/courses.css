@@ -1,0 +1,94 @@
+h1.h2.courses__title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.courses__grid {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr));
+    gap: 100px;
+}
+
+/* styles/courses.css */
+
+.courses-container {
+    display: flex;           /* Используем flexbox для размещения карточек в ряд */
+    flex-wrap: wrap;        /* Переносим карточки на новую строку, если не хватает места */
+    justify-content: space-around; /* Распределяем карточки равномерно по ширине контейнера */
+    padding: 20px;
+     
+    
+}
+
+.course__card {
+    width: 250px;          /* Фиксированная ширина карточки */
+    margin-bottom: 20px;   /* Отступ между карточками по вертикали */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.card__image {
+    width: 100%;           /* Изображение занимает всю ширину карточки */
+    height: auto;          /* Автоматическая высота для сохранения пропорций */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    object-fit: cover; /*  Чтобы фото не растягивалось */
+}
+.courses__price,
+.courses__rating {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.courses__name {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.courses__price {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.courses__rating {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.add-to-cart-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.add-to-cart-button:hover {
+    background-color: #3e8e41;
+}
+
+#go-to-payment-button {
+    background-color: #67d867;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#go-to-payment-button:hover {
+    background-color: #4CAF50;
+}
+
